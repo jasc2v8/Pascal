@@ -1,0 +1,11 @@
+//skip comments and blank lines
+
+e:\temp\list.txt
+
+e:\temp\backup
+
+//errors
+e:\temp\error.txt
+
+
+

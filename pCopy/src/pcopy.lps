@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Release"/>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="pcopy.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="36" Y="19"/>
+        <UsageCount Value="154"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="..\example.pas"/>
+        <UnitName Value="Project1"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\184\fpc\3.0.4\source\packages\fcl-base\src\custapp.pp"/>
+        <UnitName Value="CustApp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="218"/>
+        <CursorPos X="10" Y="222"/>
+        <UsageCount Value="32"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="fileutilwin.pas"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="2" Y="3"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\LazarusConfigUtility\fileutilwin.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="49" Y="61"/>
+        <UsageCount Value="73"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\184\components\lazutils\fileutil.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="667"/>
+        <CursorPos Y="690"/>
+        <UsageCount Value="8"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\184\components\lazutils\lazfileutils.pas"/>
+        <UnitName Value="LazFileUtils"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="90"/>
+        <CursorPos X="25" Y="94"/>
+        <UsageCount Value="20"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\Users\Jim\AppData\Local\Temp\Temp1_faf (1).zip\main.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <UsageCount Value="5"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus\184\fpc\3.0.4\source\packages\rtl-objpas\src\inc\strutils.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1526"/>
+        <CursorPos X="104" Y="1549"/>
+        <UsageCount Value="9"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\184\fpc\3.0.4\source\rtl\win32\system.pp"/>
+        <UnitName Value="System"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="67"/>
+        <CursorPos X="9" Y="3"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\184\fpc\3.0.4\source\rtl\win\sysutils.pp"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="28" Column="46" TopLine="14"/>
+      </Position1>
+      <Position2>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="31" Column="70" TopLine="14"/>
+      </Position2>
+      <Position3>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="32" Column="21" TopLine="17"/>
+      </Position3>
+      <Position4>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="387" Column="79" TopLine="369"/>
+      </Position4>
+      <Position5>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="359" Column="34" TopLine="342"/>
+      </Position5>
+      <Position6>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="360" Column="51" TopLine="342"/>
+      </Position6>
+      <Position7>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="360" Column="4" TopLine="345"/>
+      </Position7>
+      <Position8>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="271" Column="21" TopLine="261"/>
+      </Position8>
+      <Position9>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="320" Column="43" TopLine="311"/>
+      </Position9>
+      <Position10>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="321" Column="74" TopLine="311"/>
+      </Position10>
+      <Position11>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="45" Column="14" TopLine="32"/>
+      </Position11>
+      <Position12>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="70" Column="28" TopLine="51"/>
+      </Position12>
+      <Position13>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="260" Column="17" TopLine="240"/>
+      </Position13>
+      <Position14>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="248" Column="36" TopLine="245"/>
+      </Position14>
+      <Position15>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="6" Column="9"/>
+      </Position15>
+      <Position16>
+        <Filename Value="pcopy.lpr"/>
+      </Position16>
+      <Position17>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="405" Column="21" TopLine="388"/>
+      </Position17>
+      <Position18>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="12" Column="9"/>
+      </Position18>
+      <Position19>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="372" Column="6" TopLine="368"/>
+      </Position19>
+      <Position20>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="12" Column="55"/>
+      </Position20>
+      <Position21>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="372" Column="6" TopLine="359"/>
+      </Position21>
+      <Position22>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="19"/>
+      </Position22>
+      <Position23>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="375" Column="61" TopLine="368"/>
+      </Position23>
+      <Position24>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="48" Column="25" TopLine="40"/>
+      </Position24>
+      <Position25>
+        <Filename Value="pcopy.lpr"/>
+      </Position25>
+      <Position26>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="48" Column="24" TopLine="25"/>
+      </Position26>
+      <Position27>
+        <Filename Value="pcopy.lpr"/>
+      </Position27>
+      <Position28>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="78" Column="42" TopLine="55"/>
+      </Position28>
+      <Position29>
+        <Filename Value="pcopy.lpr"/>
+        <Caret Line="380" TopLine="342"/>
+      </Position29>
+      <Position30>
+        <Filename Value="fileutilwin.pas"/>
+        <Caret Line="38" Column="9" TopLine="30"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

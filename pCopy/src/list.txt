@@ -1,0 +1,17 @@
+//skip comments and blank lines
+
+//format is 'from', to defaults to command line param
+//example: fcopy @list e:\temp
+fpcopy.lpi
+fpcopy.lpr
+
+//format is 'from, to', command line param ignored
+list.txt, e:\temp
+listEmpty.txt, e:\temp
+
+//errors
+, e:\ERROR
+ERROR.TXT,
+
+
+
