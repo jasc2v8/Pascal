@@ -1,0 +1,189 @@
+object frmMain: TfrmMain
+  Left = 490
+  Height = 620
+  Top = 203
+  Width = 888
+  ActiveControl = Grid
+  Caption = 'Bulk Install Utility'
+  ClientHeight = 620
+  ClientWidth = 888
+  Menu = mMain
+  OnActivate = FormActivate
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poDesktopCenter
+  LCLVersion = '1.8.2.0'
+  Visible = False
+  object Grid: TStringGrid
+    Left = 16
+    Height = 576
+    Top = 8
+    Width = 855
+    AlternateColor = clInfoBk
+    AutoEdit = False
+    AutoFillColumns = True
+    Color = clDefault
+    ColCount = 6
+    ColumnClickSorts = True
+    Columns = <    
+      item
+        SizePriority = 0
+        Title.Caption = 'Category'
+        Width = 100
+      end    
+      item
+        SizePriority = 0
+        Title.Caption = 'Library Name'
+        Width = 250
+      end    
+      item
+        Title.Caption = 'Installed Version'
+        Width = 161
+      end    
+      item
+        Title.Caption = 'LIbrary Version'
+        Width = 161
+      end    
+      item
+        Title.Caption = 'Update Version'
+        Width = 161
+      end    
+      item
+        Title.Caption = 'Online Version'
+        Width = 0
+        Visible = False
+      end>
+    DefaultColWidth = 128
+    FixedCols = 0
+    MouseWheelOption = mwGrid
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goEditing, goRowSelect, goSmoothScroll]
+    PopupMenu = mPopup
+    RangeSelectMode = rsmMulti
+    RowCount = 1
+    TabOrder = 0
+    OnKeyDown = GridKeyDown
+    ColWidths = (
+      100
+      250
+      161
+      161
+      161
+      0
+    )
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 577
+    Width = 888
+    Panels = <>
+  end
+  object SaveDialog: TSaveDialog
+    left = 648
+    top = 96
+  end
+  object mPopup: TPopupMenu
+    left = 262
+    top = 76
+    object miSelectAll: TMenuItem
+      Caption = 'Select All'
+      ShortCut = 16449
+      OnClick = miSelectAllClick
+    end
+    object MenuItem7: TMenuItem
+      Caption = '-'
+    end
+    object miInstall: TMenuItem
+      Caption = 'Install'
+      OnClick = miInstallClick
+    end
+    object miUpdate: TMenuItem
+      Caption = 'Update'
+      OnClick = miUpdateClick
+    end
+    object miUpdateInstall: TMenuItem
+      Caption = 'Update and Install'
+      OnClick = miUpdateInstallClick
+    end
+    object MenuItem6: TMenuItem
+      Caption = '-'
+    end
+    object miArchive: TMenuItem
+      Caption = 'Archive'
+      OnClick = miArchiveClick
+    end
+    object miExplore: TMenuItem
+      Caption = 'Explore'
+      OnClick = miExploreClick
+    end
+    object miProperties: TMenuItem
+      Caption = 'Properties'
+      OnClick = miPropertiesClick
+    end
+    object miRename: TMenuItem
+      Caption = 'Rename'
+      OnClick = miRenameClick
+    end
+    object MenuItem10: TMenuItem
+      Caption = '-'
+    end
+    object miDownload: TMenuItem
+      Caption = 'Download'
+      OnClick = miDownloadClick
+    end
+    object miGetOnlineVersions: TMenuItem
+      Caption = 'Get Online Version(s)'
+      OnClick = miGetOnlineVersionsClick
+    end
+    object MenuItem1: TMenuItem
+      Caption = '-'
+    end
+  end
+  object mMain: TMainMenu
+    left = 112
+    top = 78
+    object miFile: TMenuItem
+      Caption = '&File'
+      object miFileOpen: TMenuItem
+        Caption = '&Open'
+        OnClick = miFileOpenClick
+      end
+      object miFileSave: TMenuItem
+        Caption = '&Save'
+        OnClick = miFileSaveClick
+      end
+      object miSpacer1: TMenuItem
+        Caption = '-'
+      end
+      object miRestart: TMenuItem
+        Caption = '&Restart'
+        OnClick = miRestartClick
+      end
+      object miQuit: TMenuItem
+        Caption = '&Quit'
+        OnClick = miQuitClick
+      end
+    end
+    object miHelp: TMenuItem
+      Caption = '&Help'
+      object miOnlineHelp: TMenuItem
+        Caption = '&Online Help'
+        OnClick = miOnlineHelpClick
+      end
+      object miSpacer2: TMenuItem
+        Caption = '-'
+      end
+      object miAbout: TMenuItem
+        Caption = '&About'
+        OnClick = miAboutClick
+      end
+    end
+  end
+  object SelectDirectoryDialog: TSelectDirectoryDialog
+    FileName = 'C:\DEV\Pascal\BulkInstallUtility'
+    InitialDir = 'C:\DEV\Pascal\'
+    left = 462
+    top = 106
+  end
+end

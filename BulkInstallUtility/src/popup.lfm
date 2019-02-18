@@ -1,0 +1,71 @@
+object frmPopup: TfrmPopup
+  Left = 656
+  Height = 193
+  Top = 20
+  Width = 442
+  ActiveControl = LabeledEdit2
+  Caption = 'Bulk Install Utility'
+  ClientHeight = 193
+  ClientWidth = 442
+  OnClose = FormClose
+  Position = poMainFormCenter
+  LCLVersion = '1.8.2.0'
+  object LabeledEdit1: TLabeledEdit
+    Left = 16
+    Height = 23
+    Top = 40
+    Width = 408
+    AutoSelect = False
+    AutoSize = False
+    Color = clInfoBk
+    EditLabel.AnchorSideLeft.Control = LabeledEdit1
+    EditLabel.AnchorSideRight.Control = LabeledEdit1
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LabeledEdit1
+    EditLabel.Left = 16
+    EditLabel.Height = 15
+    EditLabel.Top = 22
+    EditLabel.Width = 408
+    EditLabel.Caption = 'Improper Filename in Library, should be: ''file name 0.0.0.exe'':'
+    EditLabel.ParentColor = False
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object LabeledEdit2: TLabeledEdit
+    Left = 16
+    Height = 23
+    Top = 104
+    Width = 408
+    EditLabel.AnchorSideLeft.Control = LabeledEdit2
+    EditLabel.AnchorSideRight.Control = LabeledEdit2
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LabeledEdit2
+    EditLabel.Left = 16
+    EditLabel.Height = 15
+    EditLabel.Top = 86
+    EditLabel.Width = 408
+    EditLabel.Caption = 'Rename to:'
+    EditLabel.ParentColor = False
+    TabOrder = 3
+  end
+  object btnOK: TButton
+    Left = 360
+    Height = 30
+    Top = 144
+    Width = 60
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    OnClick = btnOKClick
+    TabOrder = 0
+  end
+  object btnCancel: TButton
+    Left = 280
+    Height = 30
+    Top = 144
+    Width = 60
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 1
+  end
+end
