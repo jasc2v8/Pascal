@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Release"/>
+    <Units Count="4">
+      <Unit0>
+        <Filename Value="setenv.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="291"/>
+        <CursorPos Y="234"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="C:\lazarus\184\fpc\3.0.4\source\packages\fcl-registry\src\regdef.inc"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="3" Y="12"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\184\fpc\3.0.4\source\rtl\win\wininc\defines.inc"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="2353"/>
+        <CursorPos X="39" Y="2364"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus\184\fpc\3.0.4\source\rtl\objpas\sysutils\sysstrh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16"/>
+        <CursorPos X="4" Y="27"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="235" Column="41" TopLine="224"/>
+      </Position1>
+      <Position2>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="209" Column="17" TopLine="209"/>
+      </Position2>
+      <Position3>
+        <Filename Value="setenv.lpr"/>
+      </Position3>
+      <Position4>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="14" Column="56"/>
+      </Position4>
+      <Position5>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="84" Column="27" TopLine="66"/>
+      </Position5>
+      <Position6>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="107" Column="38" TopLine="89"/>
+      </Position6>
+      <Position7>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="150" Column="25" TopLine="131"/>
+      </Position7>
+      <Position8>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="166" Column="25" TopLine="148"/>
+      </Position8>
+      <Position9>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="281" Column="23" TopLine="263"/>
+      </Position9>
+      <Position10>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="283" Column="23" TopLine="265"/>
+      </Position10>
+      <Position11>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="286" Column="23" TopLine="268"/>
+      </Position11>
+      <Position12>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="293" Column="23" TopLine="275"/>
+      </Position12>
+      <Position13>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="289" TopLine="280"/>
+      </Position13>
+      <Position14>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="233" Column="16" TopLine="189"/>
+      </Position14>
+      <Position15>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="42" Column="14" TopLine="29"/>
+      </Position15>
+      <Position16>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="233" Column="29" TopLine="162"/>
+      </Position16>
+      <Position17>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="45" Column="6" TopLine="31"/>
+      </Position17>
+      <Position18>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="233" Column="21" TopLine="224"/>
+      </Position18>
+      <Position19>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="17" Column="3" TopLine="14"/>
+      </Position19>
+      <Position20>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="63" Column="11" TopLine="61"/>
+      </Position20>
+      <Position21>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="260" Column="24" TopLine="251"/>
+      </Position21>
+      <Position22>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="121" Column="51" TopLine="107"/>
+      </Position22>
+      <Position23>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="51" TopLine="34"/>
+      </Position23>
+      <Position24>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="159" Column="34" TopLine="145"/>
+      </Position24>
+      <Position25>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="155" Column="34" TopLine="144"/>
+      </Position25>
+      <Position26>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="159" Column="34" TopLine="148"/>
+      </Position26>
+      <Position27>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="168" Column="55" TopLine="157"/>
+      </Position27>
+      <Position28>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="60" TopLine="39"/>
+      </Position28>
+      <Position29>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="17" Column="16" TopLine="6"/>
+      </Position29>
+      <Position30>
+        <Filename Value="setenv.lpr"/>
+        <Caret Line="57" Column="11" TopLine="109"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
