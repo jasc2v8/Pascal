@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Release"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="demo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="10" Y="5"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="fileutilwin.pas"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="1">
+      <Position1>
+        <Filename Value="fileutilwin.pas"/>
+        <Caret Line="114" TopLine="111"/>
+      </Position1>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

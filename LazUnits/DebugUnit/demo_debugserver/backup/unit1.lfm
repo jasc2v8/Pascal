@@ -1,0 +1,30 @@
+object frmMain: TfrmMain
+  Left = 351
+  Height = 425
+  Top = 250
+  Width = 611
+  Caption = 'Debug Server Demo'
+  ClientHeight = 425
+  ClientWidth = 611
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object Memo1: TMemo
+    Left = 21
+    Height = 347
+    Top = 20
+    Width = 572
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object btnDemo: TButton
+    Left = 532
+    Height = 22
+    Top = 384
+    Width = 57
+    Caption = 'Demo'
+    OnClick = btnDemoClick
+    TabOrder = 1
+  end
+end

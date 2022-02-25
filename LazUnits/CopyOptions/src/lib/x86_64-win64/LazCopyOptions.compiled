@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\184\fpc\3.0.4\bin\i386-win32\fpc.exe" Date="1286835357"/>
+  <Params Value=" -Twin64 -Px86_64 -MObjFPC -Scghi -CX -O3 -XX -WG -l -vewnhibq -FiD:\DEV\Work\pascal\LazUnits\LazCopyOptions\lib\x86_64-win64 -FuC:\lazarus\184\components\synedit\units\x86_64-win64\win32 -FuC:\lazarus\184\lcl\units\x86_64-win64\win32 -FuC:\lazarus\184\lcl\units\x86_64-win64 -FuC:\lazarus\184\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\184\packager\units\x86_64-win64 -FuD:\DEV\Work\pascal\LazUnits\LazCopyOptions\ -FUD:\DEV\Work\pascal\LazUnits\LazCopyOptions\lib\x86_64-win64\ -dLCL -dLCLwin32 LazCopyOptions.lpr"/>
+</CONFIG>

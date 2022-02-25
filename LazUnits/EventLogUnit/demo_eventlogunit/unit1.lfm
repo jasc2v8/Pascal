@@ -1,0 +1,48 @@
+object Form1: TForm1
+  Left = 351
+  Height = 425
+  Top = 250
+  Width = 611
+  ActiveControl = Memo1
+  Caption = 'TEventLogCustom Demo'
+  ClientHeight = 425
+  ClientWidth = 611
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  Visible = False
+  object Memo1: TMemo
+    Left = 21
+    Height = 347
+    Top = 20
+    Width = 572
+    Lines.Strings = (
+      '1. Enter text in this Memo'
+      ''
+      '2. Press the WRITE button to append to the log file'
+      ''
+      '3. Press the OPEN button to view the log file'
+      ''
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object ButtonWrite: TButton
+    Left = 520
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Write Log'
+    OnClick = ButtonWriteClick
+    TabOrder = 1
+  end
+  object ButtonOpen: TButton
+    Left = 424
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Open Log'
+    OnClick = ButtonOpenClick
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,2 @@
+res RCDATA "res.rc"
+index RCDATA "help.html"

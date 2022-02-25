@@ -1,0 +1,227 @@
+Relationship,Title,Text,Class,Visible,Handle,ParentHandle
+CHILD,CoreInput,,Windows.UI.Core.CoreComponentInputSource,T,0x00010222,0x00010212
+PARENT,,,Shell_TrayWnd,T,0x00010118,0x00000000
+CHILD,Start,Start,Start,T,0x0001011E,0x00010118
+CHILD,Type here to search,Type here to search,TrayButton,T,0x00010120,0x00010118
+CHILD,Task View,Task View,TrayButton,T,0x0001012A,0x00010118
+CHILD,,,ReBarWindow32,T,0x00010160,0x00010118
+CHILD,Running applications,Running applications,MSTaskSwWClass,T,0x00010162,0x00010160
+CHILD,Running applications,Running applications,MSTaskListWClass,T,0x00010164,0x00010162
+CHILD,,,PeopleBand,T,0x0001016E,0x00010160
+CHILD,People,People,TrayButton,T,0x00010170,0x0001016E
+CHILD,,,TrayNotifyWnd,T,0x0001012E,0x00010118
+CHILD,,,Button,T,0x00010130,0x0001012E
+CHILD,System Promoted Notification Area,System Promoted Notification Area,ToolbarWindow32,T,0x0001013C,0x0001012E
+CHILD,,,SysPager,T,0x0001013E,0x0001012E
+CHILD,User Promoted Notification Area,User Promoted Notification Area,ToolbarWindow32,T,0x00010140,0x0001013E
+CHILD,Windows Ink Workspace,Windows Ink Workspace,PenWorkspaceButton,T,0x00010142,0x0001012E
+CHILD,System Clock  12:58 PM  ‎10/‎27/‎2018,System Clock  12:58 PM  ‎10/‎27/‎2018,TrayClockWClass,T,0x00010150,0x0001012E
+CHILD,Action Center,Action Center,TrayButton,T,0x00010154,0x0001012E
+CHILD,,,TrayShowDesktopButtonWClass,T,0x00010158,0x0001012E
+PARENT,WinInfo,WinInfo,Window,T,0x004C050C,0x00000000
+CHILD,,,msctls_updown32,T,0x0024075E,0x004C050C
+CHILD,0,0,Edit,T,0x00130636,0x004C050C
+CHILD,Open CSV,Open CSV,Button,T,0x002F0ADE,0x004C050C
+CHILD,List Visible,List Visible,Button,T,0x002B0A3A,0x004C050C
+CHILD,List All,List All,Button,T,0x001705C2,0x004C050C
+CHILD,Clear,Clear,Button,T,0x00510738,0x004C050C
+CHILD,Working...,Working...,Edit,T,0x002309DA,0x004C050C
+PARENT,wininfo,wininfo,Window,T,0x001706A6,0x00000000
+PARENT,wininfo (D:\DEV\Work\pascal\WinAutoKey\examples\wininfo) - Debug - Lazarus IDE v1.8.4,wininfo (D:\DEV\Work\pascal\WinAutoKey\examples\wininfo) - Debug - Lazarus IDE v1.8.4,Window,T,0x00070B72,0x00000000
+CHILD,AnchorDockSplitter1,AnchorDockSplitter1,Window,T,0x000E05A4,0x00070B72
+CHILD,Source Editor   Object Inspector,Source Editor   Object Inspector,Window,T,0x00100510,0x00070B72
+CHILD,AnchorDockSplitter4,AnchorDockSplitter4,Window,T,0x00430682,0x00100510
+CHILD,Object Inspector,Object Inspector,Window,T,0x001E09FE,0x00100510
+CHILD,Object Inspector,Object Inspector,Window,T,0x002609C6,0x001E09FE
+CHILD,,,Window,T,0x00140658,0x002609C6
+CHILD,,,SysTabControl32,T,0x0024072A,0x00140658
+CHILD,,,Window,T,0x007901E4,0x0024072A
+CHILD,PropertyGrid,PropertyGrid,Window,T,0x005B0564,0x007901E4
+CHILD,(TStrings),(TStrings),Edit,T,0x00850AB6,0x005B0564
+CHILD,,,Window,T,0x001D0ADA,0x00140658
+CHILD,,,Edit,T,0x001F070E,0x001D0ADA
+CHILD,Splitter2,Splitter2,Window,T,0x00280AD0,0x002609C6
+CHILD,Splitter1,Splitter1,Window,T,0x00C40A42,0x002609C6
+CHILD,,,Window,T,0x00250A1C,0x002609C6
+CHILD,,,Window,T,0x00190622,0x00250A1C
+CHILD,TLazIPHtmlControl_IPHTMLPanel,TLazIPHtmlControl_IPHTMLPanel,Window,T,0x004409F0,0x00190622
+CHILD,,,Window,T,0x00150B24,0x004409F0
+CHILD,,,Window,T,0x00190A1A,0x002609C6
+CHILD,ComponentTree,ComponentTree,Window,T,0x001D0586,0x00190A1A
+CHILD,,,Window,T,0x001B06D4,0x00190A1A
+CHILD,,,Edit,T,0x00270A20,0x001B06D4
+CHILD,,TMemo.Lines:TStrings = class(TPersistent),msctls_statusbar32,T,0x001F09F4,0x002609C6
+CHILD,Object Inspector,Object Inspector,Window,T,0x001F09E8,0x001E09FE
+CHILD,,,Window,T,0x002C09D0,0x00100510
+CHILD,,,SysTabControl32,T,0x0013057A,0x002C09D0
+CHILD,,,Window,T,0x00160578,0x0013057A
+CHILD,Code Explorer,Code Explorer,Window,T,0x00300444,0x00160578
+CHILD,Code Explorer,Code Explorer,Window,T,0x002F05EC,0x00300444
+CHILD,,,SysTabControl32,T,0x00550AB0,0x002F05EC
+CHILD,,,Window,T,0x0012060C,0x00550AB0
+CHILD,,,Window,T,0x001F06B8,0x0012060C
+CHILD,,,Edit,T,0x004A0A3E,0x001F06B8
+CHILD,,,Window,T,0x001B0A64,0x0012060C
+CHILD,AnchorDockSplitter3,AnchorDockSplitter3,Window,T,0x00160A8E,0x00100510
+CHILD,,,Window,T,0x0010068E,0x00100510
+CHILD,,,SysTabControl32,T,0x0011070A,0x0010068E
+CHILD,,,Window,T,0x000E0662,0x0011070A
+CHILD,Messages,Messages,Window,T,0x000E05B0,0x000E0662
+CHILD,Messages,Messages,Window,T,0x000E0616,0x000E05B0
+CHILD,,,Window,T,0x001805E8,0x000E0616
+CHILD,,,Window,T,0x00130930,0x001805E8
+CHILD,AnchorDockSplitter2,AnchorDockSplitter2,Window,T,0x001C0AA0,0x00100510
+CHILD,Source Editor,Source Editor,Window,T,0x002E0034,0x00100510
+CHILD,Source Editor,Source Editor,Window,T,0x002B0710,0x002E0034
+CHILD,,,SysTabControl32,T,0x001304C8,0x002B0710
+CHILD,,,Window,T,0x001C0A9A,0x001304C8
+CHILD,,,SysTabControl32,T,0x000F0612,0x001C0A9A
+CHILD,,,Window,T,0x003C062E,0x000F0612
+CHILD,,,Window,T,0x002D0928,0x003C062E
+CHILD,,,Window,T,0x002701C6,0x002D0928
+CHILD,,,Window,T,0x00210278,0x002B0710
+CHILD,,    156:  11,msctls_statusbar32,T,0x001D06E8,0x002B0710
+CHILD,Source Editor,Source Editor,Window,T,0x001505FA,0x002E0034
+CHILD,,,SysTabControl32,T,0x004F0A08,0x00070B72
+CHILD,,,Window,T,0x003A08E0,0x004F0A08
+CHILD,,,Window,T,0x004206F8,0x003A08E0
+CHILD,,,Window,T,0x002C055A,0x003A08E0
+CHILD,,,msctls_updown32,T,0x001506BE,0x004F0A08
+CHILD,,,Window,T,0x002809E0,0x00070B72
+CHILD,,,Window,T,0x000E06B0,0x002809E0
+CHILD,,,Window,T,0x001504D0,0x002809E0
+CHILD,,,Window,T,0x00070B62,0x00070B72
+PARENT,wininfo (D:\DEV\Work\pascal\WinAutoKey\examples\wininfo) - Lazarus IDE v1.8.4,wininfo (D:\DEV\Work\pascal\WinAutoKey\examples\wininfo) - Lazarus IDE v1.8.4,Window,T,0x001606A2,0x00000000
+PARENT,Q-Dir 6.49.4,Q-Dir 6.49.4,ATL:0000000140144FF0,T,0x00040354,0x00000000
+CHILD,,,ReBarWindow32,T,0x000205B8,0x00040354
+CHILD,,,ToolbarWindow32,T,0x0002058E,0x000205B8
+CHILD,,,WTL_CommandBar2,T,0x000205B4,0x000205B8
+CHILD,......,17 Objects,msctls_statusbar32,T,0x000107A8,0x00040354
+CHILD,,,WTL_XSplitterWindow,T,0x000107AA,0x00040354
+CHILD,,,WTL_XSplitterWindow,T,0x000207DA,0x000107AA
+CHILD,,,WTL_XSplitterWindow,T,0x000207DC,0x000207DA
+CHILD,,,#32770,T,0x000107E0,0x000207DC
+CHILD,,Date created: ‎9/‎3/‎2018 ‏‎8:04 AM Size: 1.80 MB,msctls_statusbar32,T,0x00010814,0x000107E0
+CHILD,,,ToolbarWindow32,T,0x00010816,0x00010814
+CHILD,,,ToolbarWindow32,T,0x0001081A,0x00010814
+CHILD,,,#32770,T,0x000107E2,0x000107E0
+CHILD,,,ToolbarWindow32,T,0x000107E4,0x000107E2
+CHILD,,,ToolbarWindow32,T,0x000107FA,0x000107E2
+CHILD,,D:\DEV\Work\pascal\LazUnits\DebugUnit\demo_debugform,ComboBoxEx32,T,0x000107E6,0x000107E2
+CHILD,,,ComboBox,T,0x000107E8,0x000107E6
+CHILD,,D:\DEV\Work\pascal\LazUnits\DebugUnit\demo_debugform,Edit,T,0x000107EC,0x000107E8
+CHILD,,,WTL_CommandBar2,T,0x000107FC,0x000107E0
+CHILD,,,WTL_XSplitterWindow,T,0x000107FE,0x000107E0
+CHILD,,,ATL:00000001401451E0,T,0x0001080A,0x000107FE
+CHILD,,,ATL:00000001401450A0,T,0x00010812,0x0001080A
+CHILD,,,SHELLDLL_DefView,T,0x000F0AC2,0x00010812
+CHILD,FolderView,FolderView,SysListView32,T,0x002006C6,0x000F0AC2
+CHILD,,,SysHeader32,T,0x015009F2,0x002006C6
+CHILD,,,Static,T,0x0001081C,0x000107E0
+CHILD,,,#32770,T,0x0001081E,0x000207DC
+CHILD,,17 Objects,msctls_statusbar32,T,0x00010850,0x0001081E
+CHILD,,,ToolbarWindow32,T,0x00010852,0x00010850
+CHILD,,,ToolbarWindow32,T,0x00010856,0x00010850
+CHILD,,,#32770,T,0x00010820,0x0001081E
+CHILD,,,ToolbarWindow32,T,0x00010822,0x00010820
+CHILD,,,ToolbarWindow32,T,0x00010838,0x00010820
+CHILD,,D:\DEV\Work\pascal\WinAutoKey\examples\wininfo,ComboBoxEx32,T,0x00010824,0x00010820
+CHILD,,,ComboBox,T,0x00010826,0x00010824
+CHILD,,D:\DEV\Work\pascal\WinAutoKey\examples\wininfo,Edit,T,0x0001082A,0x00010826
+CHILD,,,WTL_CommandBar2,T,0x0001083A,0x0001081E
+CHILD,,,WTL_XSplitterWindow,T,0x0001083C,0x0001081E
+CHILD,,,ATL:00000001401451E0,T,0x00010848,0x0001083C
+CHILD,,,ATL:00000001401450A0,T,0x0001084E,0x00010848
+CHILD,,,SHELLDLL_DefView,T,0x002D072E,0x0001084E
+CHILD,FolderView,FolderView,SysListView32,T,0x00020B78,0x002D072E
+CHILD,,,SysHeader32,T,0x003F0A46,0x00020B78
+CHILD,,,Static,T,0x00010858,0x0001081E
+CHILD,,,WTL_XSplitterWindow,T,0x000107DE,0x000207DA
+CHILD,,,#32770,T,0x0001085A,0x000107DE
+CHILD,,13 Objects,msctls_statusbar32,T,0x0001088C,0x0001085A
+CHILD,,,ToolbarWindow32,T,0x0001088E,0x0001088C
+CHILD,,,ToolbarWindow32,T,0x00010892,0x0001088C
+CHILD,,,#32770,T,0x0001085C,0x0001085A
+CHILD,,,ToolbarWindow32,T,0x0001085E,0x0001085C
+CHILD,,,ToolbarWindow32,T,0x00010874,0x0001085C
+CHILD,,D:\DEV\Lang\Pascal,ComboBoxEx32,T,0x00010860,0x0001085C
+CHILD,,,ComboBox,T,0x00010862,0x00010860
+CHILD,,D:\DEV\Lang\Pascal,Edit,T,0x00010866,0x00010862
+CHILD,,,WTL_CommandBar2,T,0x00010876,0x0001085A
+CHILD,,,WTL_XSplitterWindow,T,0x00010878,0x0001085A
+CHILD,,,ATL:00000001401451E0,T,0x00010884,0x00010878
+CHILD,,,ATL:00000001401450A0,T,0x0001088A,0x00010884
+CHILD,,,SHELLDLL_DefView,T,0x000B0676,0x0001088A
+CHILD,FolderView,FolderView,SysListView32,T,0x00190706,0x000B0676
+CHILD,,,SysHeader32,T,0x002F0A16,0x00190706
+CHILD,,,Static,T,0x00010894,0x0001085A
+CHILD,,,#32770,T,0x00010896,0x000107DE
+CHILD,,Type: PAS File Size: 35.1 KB Date modified: ‎10/‎27/‎2018 ‏‎9:20 AM,msctls_statusbar32,T,0x000108C8,0x00010896
+CHILD,,,ToolbarWindow32,T,0x000108CA,0x000108C8
+CHILD,,,ToolbarWindow32,T,0x000108CE,0x000108C8
+CHILD,,,#32770,T,0x00010898,0x00010896
+CHILD,,,ToolbarWindow32,T,0x0001089A,0x00010898
+CHILD,,,ToolbarWindow32,T,0x000108B0,0x00010898
+CHILD,,D:\DEV\Work\pascal\WinAutoKey\examples\savelinks,ComboBoxEx32,T,0x0001089C,0x00010898
+CHILD,,,ComboBox,T,0x0001089E,0x0001089C
+CHILD,,D:\DEV\Work\pascal\WinAutoKey\examples\savelinks,Edit,T,0x000108A2,0x0001089E
+CHILD,,,WTL_CommandBar2,T,0x000108B2,0x00010896
+CHILD,,,WTL_XSplitterWindow,T,0x000108B4,0x00010896
+CHILD,,,ATL:00000001401451E0,T,0x000108C0,0x000108B4
+CHILD,,,ATL:00000001401450A0,T,0x000108C6,0x000108C0
+CHILD,,,SHELLDLL_DefView,T,0x01250A18,0x000108C6
+CHILD,FolderView,FolderView,SysListView32,T,0x00120B22,0x01250A18
+CHILD,,,SysHeader32,T,0x0021057E,0x00120B22
+CHILD,,,Static,T,0x000108D0,0x00010896
+PARENT,D:\DEV\Work\pascal\WinAutoKey\examples\login\unit1.pas - Notepad++,D:\DEV\Work\pascal\WinAutoKey\examples\login\unit1.pas - Notepad++,Notepad++,T,0x001F08D2,0x00000000
+CHILD,N,{This is free and unencumbered software released into the public domain.Anyone is free to copy  modify  publish  use  compile  sell  ordistribute this software  either in source code form or as a compiledbinary  for any purpose  commercial or non-co,Scintilla,T,0x00180A48,0x001F08D2
+CHILD,Tab,Tab,SysTabControl32,T,0x0008050E,0x001F08D2
+CHILD,,Pascal source file,msctls_statusbar32,T,0x000D04DA,0x001F08D2
+CHILD,,,ReBarWindow32,T,0x000A063E,0x001F08D2
+CHILD,,,ToolbarWindow32,T,0x000B0552,0x000A063E
+CHILD,,,ReBarWindow32,T,0x000C0666,0x001F08D2
+CHILD,,,#32770,T,0x003D00FA,0x000C0666
+CHILD,X,X,Button,T,0x00160ABC,0x003D00FA
+CHILD,Find :,Find :,Static,T,0x001206B2,0x003D00FA
+CHILD,,,Edit,T,0x000C04F4,0x003D00FA
+CHILD,<,<,Button,T,0x000B066A,0x003D00FA
+CHILD,>,>,Button,T,0x001F0684,0x003D00FA
+CHILD,&Highlight all,&Highlight all,Button,T,0x0009051C,0x003D00FA
+CHILD,Match &case,Match &case,Button,T,0x001004A6,0x003D00FA
+CHILD,,,Static,T,0x001701FA,0x003D00FA
+PARENT,Develop Windows desktop applications | Microsoft Docs - Google Chrome,Develop Windows desktop applications | Microsoft Docs - Google Chrome,Chrome_WidgetWin_1,T,0x000308EA,0x00000000
+CHILD,,,Intermediate D3D Window,T,0x0001098E,0x000308EA
+PARENT,Settings,,Windows.UI.Core.CoreWindow,T,0x0001049E,0x00000000
+PARENT,,,ApplicationFrameWindow,T,0x00010380,0x00000000
+CHILD,,,ApplicationFrameTitleBarWindow,T,0x00010388,0x00010380
+CHILD,,,ApplicationFrameInputSinkWindow,T,0x0001038A,0x00010380
+PARENT,Calculator,,Windows.UI.Core.CoreWindow,T,0x00010490,0x00000000
+PARENT,OneNote,,Windows.UI.Core.CoreWindow,T,0x00020372,0x00000000
+PARENT,Microsoft Edge,,Windows.UI.Core.CoreWindow,T,0x00010432,0x00000000
+CHILD,CoreInput,,Windows.UI.Core.CoreComponentInputSource,T,0x00020446,0x00010432
+PARENT,Microsoft Edge,,Windows.UI.Core.CoreWindow,T,0x0001042E,0x00000000
+PARENT,Microsoft Edge,,Windows.UI.Core.CoreWindow,T,0x00010430,0x00000000
+PARENT,Microsoft Edge,,Windows.UI.Core.CoreWindow,T,0x0001042C,0x00000000
+PARENT,Microsoft Edge,,Windows.UI.Core.CoreWindow,T,0x0001039C,0x00000000
+PARENT,Microsoft Store,,Windows.UI.Core.CoreWindow,T,0x0003009A,0x00000000
+PARENT,Settings,Settings,ApplicationFrameWindow,T,0x0003045E,0x00000000
+CHILD,,,ApplicationFrameTitleBarWindow,T,0x00020494,0x0003045E
+CHILD,,,ApplicationFrameInputSinkWindow,T,0x00010496,0x0003045E
+PARENT,Calculator,Calculator,ApplicationFrameWindow,T,0x000203EE,0x00000000
+CHILD,,,ApplicationFrameTitleBarWindow,T,0x0001048A,0x000203EE
+CHILD,,,ApplicationFrameInputSinkWindow,T,0x0001048C,0x000203EE
+PARENT,Jim's Notebook ‎- OneNote,Jim's Notebook ‎- OneNote,ApplicationFrameWindow,T,0x0004033C,0x00000000
+CHILD,,,ApplicationFrameTitleBarWindow,T,0x0004034C,0x0004033C
+CHILD,,,ApplicationFrameInputSinkWindow,T,0x00020374,0x0004033C
+PARENT,Microsoft Edge,Microsoft Edge,ApplicationFrameWindow,T,0x00020356,0x00000000
+CHILD,,,ApplicationFrameTitleBarWindow,T,0x0004035C,0x00020356
+CHILD,,,ApplicationFrameInputSinkWindow,T,0x0005036E,0x00020356
+PARENT,Microsoft Store,Microsoft Store,ApplicationFrameWindow,T,0x00030090,0x00000000
+CHILD,,,ApplicationFrameTitleBarWindow,T,0x000202F8,0x00030090
+CHILD,,,ApplicationFrameInputSinkWindow,T,0x000202FA,0x00030090
+PARENT,,,DummyDWMListenerWindow,T,0x000101C4,0x00000000
+PARENT,,,EdgeUiInputTopWndClass,T,0x000101BE,0x00000000
+PARENT,SyncBackSE V5.20.0.0,SyncBackSE V5.20.0.0,TApplication,T,0x000102AC,0x00000000
+PARENT,Program Manager,Program Manager,Progman,T,0x0002017A,0x00000000
+CHILD,,,SHELLDLL_DefView,T,0x0001017C,0x0002017A
+CHILD,FolderView,FolderView,SysListView32,T,0x0001017E,0x0001017C

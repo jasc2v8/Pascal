@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>help</title>
+
+</head>
+<body style="font-family: Courier New; color: rgb(0, 0, 0); background-color: rgb(204, 255, 255);" alink="#000099" link="#000099" vlink="#990099">
+<h1 style="font-family: Arial;">LazDebugUnit</h1>
+<h2 style="font-family: Arial;">Overview</h2>
+DebugUnitMgr adds or removes a DebugForm to a Lazarus Project.<br>
+<br>
+The DebugForm consists of the units debugform.pas and debugform.lfm.<br>
+<br>
+Currently, debugging support for Free Pacal / Lasarus IDE has limited
+support on Windows.<br>
+In lieu of a fully functional debugger, the user &nbsp;can debug
+with "old school" methods.<br>
+<br>
+Examples:<br>
+<div style="margin-left: 40px;">Debugln('Entering Function
+Add...);<br>
+Result:=Add(2,2);<br>
+Debugln('Exit Function Add, check for exceptions, result should be 4,
+actual is&nbsp;%n ', Result);<br>
+<span style="font-family: Arial;"></span></div>
+<h2 style="font-family: Arial;">Methods</h2>
+<div style="margin-left: 40px;">procedure Debugln(Arg1:
+Variant);<br>
+procedure Debugln(Arg1, Arg2:
+Variant);<br>
+procedure Debugln(Arg1, Arg2,
+Arg3: Variant);<br>
+procedure Debugln(Arg1, Arg2,
+Arg3, Arg4: Variant);<br>
+procedure Debugln(Arg1, Arg2,
+Arg3, Arg4, Arg5: Variant);<br>
+procedure Debugln(Arg1, Arg2,
+Arg3, Arg4, Arg5, Arg6: Variant);<br>
+procedure Debugln(Arg1, Arg2,
+Arg3, Arg4, Arg5, Arg6, Arg7: Variant);<br>
+procedure Debugln(Arg1, Arg2,
+Arg3, Arg4, Arg5, Arg6, Arg7, Arg8: Variant);<br><br>
+procedure Debugln(Args: array
+of Variant);<br><br>
+procedure Debugln(Fmt:string;
+Args: array of Const);
+</div>
+<ul style="font-family: Arial;">
+</ul>
+<h2 style="font-family: Arial;">Examples</h2>
+<div style="margin-left: 40px;">Debugln('Unformatted
+output up
+to 8 Args of any Type:');<br>
+Debugln('--------------------------------------------');<br>
+Debugln(1,2,3,4,5,6,7,8);<br>
+Debugln('binary=', %010);<br>
+Debugln('boolean=', true);<br>
+Debugln('decimal=', 10);<br>
+Debugln('general=',
+3.1415927);<br>
+Debugln('hex=', $0010);<br>
+Debugln('octal =', &amp;0010);<br>
+Debugln('scientific=', 1.9E6);<br>
+Debugln('signed=', -100, ' or ', +100);<br>
+Debugln('string=', 'the quick brown fox');<br>
+Debugln('mixed
+bin=',%010,',bool=',true,',dec=',10,',gen=',3.1415927);<br>
+<br>
+Debugln(LE+'Unformatted output
+with Array of Variant:');<br>
+Debugln('-----------------------------------------');<br>
+Debugln(['decimal',
+-1,true,3.1415,4,5]);<br>
+Debugln(['T1=',
+true,',T2=',false,',T3=',01.23]);<br>
+<br>
+Debugln(LE+'Formatted output
+with Array of Const:');<br>
+Debugln('-------------------------------------');<br>
+Debugln('boolean &nbsp; &nbsp;=%s or %s',
+[BoolToStr(true,false), BoolToStr(true,true)]);<br>
+Debugln('currency &nbsp; =%m',
+[1000000.]);<br>
+Debugln('decimal &nbsp; &nbsp;=%d', [-1]);<br>
+Debugln('float &nbsp; &nbsp; &nbsp;=%f', [3.1415927]);<br>
+Debugln('general &nbsp; &nbsp;=%g',
+[3.1415927]);<br>
+Debugln('hex &nbsp; &nbsp; &nbsp; &nbsp;=%x', [-1]);<br>
+Debugln('number &nbsp; &nbsp; =%n', [1000000.]);<br>
+Debugln('scientific =%e',
+[1.0e3]);<br>
+Debugln('string &nbsp; &nbsp; =%s', ['the quick brown fox']);<br>
+Debugln('unsigned &nbsp; =%u', [-1]);<br>
+Debugln('mixed
+cur &nbsp;=%m, dec=%d',[1000000.,
+10]);<br>
+Debugln('mixed float=%f,
+num=%n',[3.1415927, 1000000.]);<br>
+</div>
+<br>
+</body></html>

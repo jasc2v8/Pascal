@@ -1,0 +1,53 @@
+object Form1: TForm1
+  Left = 196
+  Height = 296
+  Top = 179
+  Width = 342
+  ActiveControl = btnClearLog
+  Caption = 'HTTPS Web Server Demo'
+  ClientHeight = 296
+  ClientWidth = 342
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object Memo1: TMemo
+    Left = 12
+    Height = 229
+    Top = 11
+    Width = 310
+    TabOrder = 0
+  end
+  object btnClearLog: TButton
+    Left = 104
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Clear Log'
+    OnClick = btnClearLogClick
+    TabOrder = 3
+  end
+  object btnStartStop: TButton
+    Left = 222
+    Height = 25
+    Top = 256
+    Width = 100
+    Anchors = [akTop, akRight]
+    Caption = 'Start Server'
+    OnClick = btnStartStopClick
+    TabOrder = 1
+  end
+  object btnOpenLog: TButton
+    Left = 12
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Open Log'
+    OnClick = btnOpenLogClick
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Release"/>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="HTTPServer.ppr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="21"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="FormMain.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="MyServer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="12" Y="93"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="/usr/lib/codetyphon/typhon/components/pl_Indy/source/base/IdHTTPServer.pas"/>
+        <TopLine Value="31"/>
+        <CursorPos X="21" Y="48"/>
+        <UsageCount Value="9"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/lib/codetyphon/typhon/components/pl_Indy/source/base/IdCustomHTTPServer.pas"/>
+        <TopLine Value="202"/>
+        <CursorPos X="3" Y="212"/>
+        <UsageCount Value="9"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../../typhon/components/pl_Indy/source/base/IdGlobal.pas"/>
+        <TopLine Value="2000"/>
+        <CursorPos X="3" Y="2007"/>
+        <UsageCount Value="9"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../../typhon/components/pl_Indy/source/base/IdHTTPServer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="38" Y="44"/>
+        <UsageCount Value="9"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../../typhon/components/pl_Indy/source/base/IdCustomHTTPServer.pas"/>
+        <TopLine Value="438"/>
+        <CursorPos X="47" Y="438"/>
+        <UsageCount Value="9"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../../../typhon/components/pl_Indy/source/IdHTTPServer.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="44" Y="44"/>
+        <UsageCount Value="13"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../../typhon/components/pl_Indy/source/IdCustomHTTPServer.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="405"/>
+        <CursorPos X="49" Y="412"/>
+        <UsageCount Value="13"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../../../typhon/components/pl_Indy/source/IdCustomTCPServer.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="439"/>
+        <CursorPos X="9" Y="454"/>
+        <UsageCount Value="13"/>
+      </Unit10>
+    </Units>
+    <JumpHistory Count="15" HistoryIndex="14">
+      <Position1>
+        <Filename Value="FormMain.pas"/>
+        <Caret Line="25" Column="26" TopLine="7"/>
+      </Position1>
+      <Position2>
+        <Filename Value="FormMain.pas"/>
+        <Caret Line="47" TopLine="29"/>
+      </Position2>
+      <Position3>
+        <Filename Value="FormMain.pas"/>
+        <Caret Line="45" Column="3" TopLine="34"/>
+      </Position3>
+      <Position4>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="23" Column="49"/>
+      </Position4>
+      <Position5>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="28" Column="9" TopLine="11"/>
+      </Position5>
+      <Position6>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="7" Column="67"/>
+      </Position6>
+      <Position7>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="14" Column="33"/>
+      </Position7>
+      <Position8>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="54" Column="34" TopLine="35"/>
+      </Position8>
+      <Position9>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="8" Column="21"/>
+      </Position9>
+      <Position10>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="9" Column="2"/>
+      </Position10>
+      <Position11>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="70" Column="3" TopLine="54"/>
+      </Position11>
+      <Position12>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="69" Column="28" TopLine="59"/>
+      </Position12>
+      <Position13>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="15" Column="37" TopLine="8"/>
+      </Position13>
+      <Position14>
+        <Filename Value="MyServer.pas"/>
+        <Caret Line="48" Column="60" TopLine="41"/>
+      </Position14>
+      <Position15>
+        <Filename Value="FormMain.pas"/>
+        <Caret Line="8" TopLine="7"/>
+      </Position15>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,14 @@
+  {folder dialog to open Indy10 folder}
+
+  {search recursive for IdCompilerDefines.inc}
+
+  {replace {.$DEFINE FREE_ON_FINAL} with {$DEFINE FREE_ON_FINAL}
+
+  {replace {$UNDEF FREE_ON_FINAL} with {.$UNDEF FREE_ON_FINAL}}
+
+C:\lazarus\packages\Indy10\Core\IdCompilerDefines.inc
+C:\lazarus\packages\Indy10\FCL\IdCompilerDefines.inc
+C:\lazarus\packages\Indy10\Protocols\IdCompilerDefines.inc
+C:\lazarus\packages\Indy10\SuperCore\IdCompilerDefines.inc
+C:\lazarus\packages\Indy10\System\IdCompilerDefines.inc
+Total Files Edited: 5 Files

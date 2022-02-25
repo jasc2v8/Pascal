@@ -1,0 +1,84 @@
+object Form1: TForm1
+  Left = 351
+  Height = 238
+  Top = 250
+  Width = 611
+  Caption = 'CryptUnit Demo'
+  ClientHeight = 238
+  ClientWidth = 611
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object ButtonCrypt: TButton
+    Left = 531
+    Height = 22
+    Top = 152
+    Width = 57
+    Caption = 'ENcode'
+    OnClick = ButtonCryptClick
+    TabOrder = 2
+  end
+  object EditKey: TLabeledEdit
+    Left = 16
+    Height = 23
+    Top = 88
+    Width = 572
+    EditLabel.AnchorSideLeft.Control = EditKey
+    EditLabel.AnchorSideRight.Control = EditKey
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = EditKey
+    EditLabel.Left = 16
+    EditLabel.Height = 15
+    EditLabel.Top = 70
+    EditLabel.Width = 572
+    EditLabel.Caption = 'Key'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+    Text = '012345'
+  end
+  object EditResult: TLabeledEdit
+    Left = 16
+    Height = 23
+    Top = 152
+    Width = 488
+    EditLabel.AnchorSideLeft.Control = EditResult
+    EditLabel.AnchorSideRight.Control = EditResult
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = EditResult
+    EditLabel.Left = 16
+    EditLabel.Height = 15
+    EditLabel.Top = 134
+    EditLabel.Width = 488
+    EditLabel.Caption = 'Result'
+    EditLabel.ParentColor = False
+    TabOrder = 3
+  end
+  object EditPassword: TLabeledEdit
+    Left = 16
+    Height = 23
+    Top = 24
+    Width = 572
+    EditLabel.AnchorSideLeft.Control = EditPassword
+    EditLabel.AnchorSideRight.Control = EditPassword
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = EditPassword
+    EditLabel.Left = 16
+    EditLabel.Height = 15
+    EditLabel.Top = 6
+    EditLabel.Width = 572
+    EditLabel.Caption = 'Password'
+    EditLabel.ParentColor = False
+    TabOrder = 0
+    Text = 'JimDreher'
+  end
+  object ButtonClear: TButton
+    Left = 531
+    Height = 22
+    Top = 192
+    Width = 57
+    Caption = 'Clear'
+    OnClick = ButtonClearClick
+    TabOrder = 4
+  end
+end

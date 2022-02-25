@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="10"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <LRSInOutputDirectory Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="Using Help in Lazarus"/>
+      <ResourceType Value="res"/>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes Count="5">
+      <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="demo"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <ExecuteBefore>
+              <Command Value="C:\lazarus\execute_before.bat $Name($TargetFile())"/>
+            </ExecuteBefore>
+          </Other>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="demo"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <ExecuteBefore>
+              <Command Value="C:\lazarus\execute_before.bat $Name($TargetFile())"/>
+            </ExecuteBefore>
+          </Other>
+        </CompilerOptions>
+      </Item3>
+      <Item4 Name="Debug64bit">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="demo"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <ExecuteBefore>
+              <Command Value="C:\lazarus\execute_before.bat $Name($TargetFile())"/>
+            </ExecuteBefore>
+          </Other>
+        </CompilerOptions>
+      </Item4>
+      <Item5 Name="Release64bit">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="demo"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <ExecuteBefore>
+              <Command Value="C:\lazarus\execute_before.bat $Name($TargetFile())"/>
+            </ExecuteBefore>
+          </Other>
+        </CompilerOptions>
+      </Item5>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <DestinationDirectory Value="D:\DEV\Work\pascal\~Archive\LazHelp_demo_browser_0.5"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="3">
+      <Item1>
+        <PackageName Value="TurboPowerIPro"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="SynEdit"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+    </RequiredPackages>
+    <Units Count="5">
+      <Unit0>
+        <Filename Value="demo.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="uHelp.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="helpunitresources.inc"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="HelpForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="uHelpDemo.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit4>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="demo"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <Optimizations>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <UseLineInfoUnit Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+</CONFIG>

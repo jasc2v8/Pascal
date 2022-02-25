@@ -1,0 +1,62 @@
+object Form1: TForm1
+  Left = 0
+  Height = 172
+  Top = 0
+  Width = 465
+  ActiveControl = EditSource
+  Caption = 'EnCrypt File Example'
+  ClientHeight = 172
+  ClientWidth = 465
+  Position = poScreenCenter
+  Visible = False
+  object EditSource: TEdit
+    Left = 123
+    Height = 23
+    Top = 40
+    Width = 317
+    TabOrder = 0
+    Text = 'clear.txt'
+  end
+  object EditTarget: TEdit
+    Left = 123
+    Height = 23
+    Top = 112
+    Width = 317
+    TabOrder = 1
+    Text = 'encrypted.txt'
+  end
+  object LabelSource: TLabel
+    Left = 123
+    Height = 15
+    Top = 16
+    Width = 100
+    Caption = 'PATH FILE SOURCE'
+    ParentColor = False
+  end
+  object LabelDestination: TLabel
+    Left = 123
+    Height = 15
+    Top = 88
+    Width = 130
+    Caption = 'PATH FILE DESTINATION'
+    ParentColor = False
+  end
+  object ButtonEnCrypt: TButton
+    Left = 16
+    Height = 58
+    Top = 88
+    Width = 90
+    Caption = 'EnCrypt'
+    OnClick = ButtonEnCryptClick
+    TabOrder = 2
+  end
+  object ButtonDeCrypt: TButton
+    Left = 16
+    Height = 62
+    Top = 16
+    Width = 90
+    Caption = 'DeCrypt'
+    OnClick = ButtonDeCryptClick
+    TabOrder = 3
+  end
+end

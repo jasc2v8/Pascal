@@ -1,0 +1,125 @@
+{
+
+Examples how to get text from window
+
+see below: procedure TForm1.btnGetTooltipClick(Sender: TObject);
+
+}
+
+type
+
+  TWinInfo = record
+    WinHandle: HWND;
+    WinClass: string;
+    WinText: string;
+    WinVisible: boolean;
+  end;
+
+{ my favorite, least amount of code }
+
+function WinGetInfoh: HWND): TWinInfo;
+var
+  Info: TWinInfo;
+  WBuf: array[0..MAX_PATH] of WChar;
+  Len: integer;
+begin
+
+  Info.WinHandle:=h;
+
+  GetClassNameW(h, LPWSTR(WBuf), MAX_PATH);
+  Info.WinClass:=UnicodeString(WBuf);
+
+  SendMessageW(h, WM_GETTEXT, MAX_PATH, LPARAM(@WBuf));
+  Info.WinText:=UnicodeString(WBuf);
+
+  Info.WinVisible:=IsWindowVisible(h);
+
+  Result:=Info;
+end;
+
+
+{ works well }
+function WinGetInfo(h: HWND): TWinInfo;
+var
+  Info: TWinInfo;
+  WBuf: WideString;
+  Len: integer;
+begin
+
+  Info.WinHandle:=h;
+
+  SetLength(WBuf, MAX_PATH);
+  Len:=GetClassNameW(h, LPWSTR(WBuf), MAX_PATH);
+  SetLength(WBuf, Len);
+  Info.WinClass:=WBuf;
+
+  SetLength(WBuf, MAX_PATH);
+  Len:=SendMessageW(h, WM_GETTEXT, MAX_PATH, LPARAM(WBuf));
+  SetLength(WBuf, Len);
+  Info.WinText:=WBuf;
+
+  Info.WinVisible:=IsWindowVisible(h);
+
+  Result:=Info
+
+
+{ these work but require more code }
+
+var
+  h: HWND;
+  Len: integer;
+  sClassName: WideString;
+  sText: String;
+  WBuf: WideString;
+  StatusBarText: array[0..$FFF] of Char;
+  StatusBarTextW: array[0..$FFF] of WChar;
+begin
+
+  Sleep(2000);
+
+  h:=FindWindow(nil, nil);
+
+  while h<>0 do begin
+
+    if (h <> Application.MainFormHandle) and IsWindowVisible(h) then begin
+
+      Len:=GetClassNameW(h, LPWSTR(sClassName), MAX_PATH);
+      SetLength(sClassName, Len);
+
+      if sClassName='tooltips_class32' then begin
+
+        Memo1.Append('sClassName='+sClassName);
+
+        //ok SendMessageW(h, WM_GETTEXT, MAX_PATH, LPARAM(@StatusBarTextW));
+        //sText:=StatusBarTextW;
+        //sText:=StrPas(StatusBarTextW);
+
+        {ok Len:=SendMessageW(h, WM_GETTEXTLENGTH,0,0);
+        SetLength(WBuf, Len);
+        SendMessageW(h, WM_GETTEXT, MAX_PATH, LPARAM(WBuf));
+        sText:=WBuf;}
+
+        //ok
+        SetLength(WBuf, MAX_PATH);
+        //Len:=SendMessageW(h, WM_GETTEXT, MAX_PATH, LPARAM(WBuf));
+        SetLength(WBuf, SendMessageW(h, WM_GETTEXT, MAX_PATH, LPARAM(WBuf)));
+        sText:=WBuf;
+
+        //Memo1.Append('sText=['+sText+'], len='+Length(sText).ToString);
+        Memo1.Append('sText=['+WBuf+'], len='+Length(WBuf).ToString);
+
+        if LeftStr(sText,4)='http' then break;
+      end;
+
+    end;
+    h:=GetWindow(h, GW_HWNDNEXT);
+  end;
+
+  if h=0 then begin
+    Memo1.Append('Not found');
+    Exit;
+  end;
+
+  Memo1.Append('Tooltip='+sText);
+
+end;

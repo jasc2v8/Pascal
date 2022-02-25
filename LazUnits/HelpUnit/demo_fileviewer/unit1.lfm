@@ -1,0 +1,66 @@
+object frmMain: TfrmMain
+  Left = 387
+  Height = 240
+  Top = 187
+  Width = 410
+  ActiveControl = btnFile
+  Caption = 'HTMLFileViewer Demo'
+  ClientHeight = 240
+  ClientWidth = 410
+  Color = clGradientInactiveCaption
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Scaled = False
+  Visible = False
+  object btnHelp: TButton
+    Left = 264
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Help'
+    OnClick = btnHelpClick
+    TabOrder = 0
+  end
+  object btnFile: TButton
+    Left = 72
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = 'File'
+    OnClick = btnFileClick
+    TabOrder = 1
+  end
+  object btnResource: TButton
+    Left = 168
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = 'Resource'
+    OnClick = btnResourceClick
+    TabOrder = 2
+  end
+  object btnURL: TButton
+    Left = 264
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = 'URL'
+    OnClick = btnURLClick
+    TabOrder = 3
+  end
+  object btnOpen: TButton
+    Left = 72
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Open'
+    OnClick = btnOpenClick
+    TabOrder = 4
+  end
+  object OpenDialog1: TOpenDialog
+    left = 192
+    top = 128
+  end
+end

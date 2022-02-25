@@ -1,0 +1,47 @@
+object Form1: TForm1
+  Left = 0
+  Height = 240
+  Top = 0
+  Width = 320
+  ActiveControl = Memo1
+  Caption = 'LazThreadUnit Demo'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnDestroy = FormDestroy
+  Visible = False
+  object Memo1: TMemo
+    Left = 8
+    Height = 185
+    Top = 8
+    Width = 301
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+  end
+  object btnStartThread: TButton
+    Left = 224
+    Height = 25
+    Top = 207
+    Width = 80
+    Caption = 'Start Thread'
+    OnClick = btnStartThreadClick
+    TabOrder = 1
+  end
+  object btnStartProc: TButton
+    Left = 112
+    Height = 25
+    Top = 207
+    Width = 80
+    Caption = 'Start Proc'
+    OnClick = btnStartProcClick
+    TabOrder = 2
+  end
+  object btnStartBoth: TButton
+    Left = 8
+    Height = 25
+    Top = 207
+    Width = 80
+    Caption = 'Start Both'
+    OnClick = btnStartBothClick
+    TabOrder = 3
+  end
+end

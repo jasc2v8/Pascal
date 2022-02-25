@@ -1,0 +1,466 @@
+{
+  The Lazarus Config Utility is used to
+    1. Move the configuration directory, typically for multiple lazarus instances
+    2. Copy options, typically to set user saved options for new installs
+
+  Move Config Directory
+
+  A Lazarus install on Windows defaults to
+    user choice install folder, e.g. 'c:\lazarus'
+    default config folder %LOCALAPPDATA%\lazarus
+
+  Use this utility to move the default config folder, for example:
+    from: %LOCALAPPDATA%\lazarus
+    to:   %LOCALAPPDATA%\lazarus\182
+
+  This is not needed for proper Lazarus operation,
+    but it keeps multiple installs neatly organized and self-documented
+
+  Then you can install an additional instance with a different config dir, for example:
+    %LOCALAPPDATA%\lazarus\184
+
+  Copy Options
+
+  Many of your favorite IDE options are saved in xml files:
+    editoroptions.xml       background color, page width, tab stops, etc.
+    environmentoptions.xml  IDE Coolbar with "Run without debugging" button, etc.
+    projectoptions.xml      Defaults for a New Project, e.g. Build modes, etc.
+
+  WARNING
+    You cannot just edit the xml file and expect the changes to appear in the IDE.
+    Many settings, such as installed packages, require an IDE build.
+
+}
+
+
+  { update dir paths in copied config files:
+
+    editoroptions       <CodeTools CodeTemplateFileName="C:\Users\Jim\AppData\Local\lazarus\lazarus.dci"
+                        writetag:=C:\Users\Jim\AppData\Local\lazarus\NEW\lazarus.dci
+
+    codetoolsoptions    <Indentation FileName="C:\Users\Jim\AppData\Local\lazarus\laz_indentation.pas"/>
+                        writetag:=C:\Users\Jim\AppData\Local\lazarus\NEW\laz_indentation.pas
+
+    environmentoptions  lazDir:=<LazarusDirectory Value="C:\lazarus\900">
+                        replace=C:\lazarus\NEW
+
+    fpcdefines          lazDir:=see above, replace=C:\lazarus\NEW
+  }
+
+unit Unit1;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  EditBtn, FileCtrl, ComCtrls,
+  LazFileUtils, FileUtilWin,
+  DebugUnit;
+
+type
+
+  { TMainForm }
+
+  TMainForm = class(TForm)
+    ButtonCopyConfig: TButton;
+    ButtonMoveConfig: TButton;
+    ButtonCopyOptions: TButton;
+    DirEditMoveConfigFrom: TDirectoryEdit;
+    DirEditCopyConfigFrom: TDirectoryEdit;
+    DirEditMoveConfigTo: TDirectoryEdit;
+    DirEditCopyConfigTo: TDirectoryEdit;
+    MemoCopyConfig: TMemo;
+    LabelMoveConfigFrom: TLabel;
+    LabelMoveConfigTo: TLabel;
+    LabelCopyOptionsFrom: TLabel;
+    LabelCopyOptionsTo: TLabel;
+    HelpMemo: TMemo;
+    LabelCopyConfigFrom: TLabel;
+    LabelCopyConfigTo: TLabel;
+    CopyOptionsMemo: TMemo;
+    DirEditCopyOptionsTo: TDirectoryEdit;
+    DirEditCopyOptionsFrom: TDirectoryEdit;
+    OptionFileList: TFileListBox;
+    MemoMoveConfig: TMemo;
+    PageControl: TPageControl;
+    TabSheetMoveConfig: TTabSheet;
+    TabSheetCopyOptions: TTabSheet;
+    HelpSheet: TTabSheet;
+    TabSheetCopyConfig: TTabSheet;
+    procedure ButtonCopyOptionsClick(Sender: TObject);
+    procedure ButtonCopyConfigClick(Sender: TObject);
+    procedure ButtonMoveConfigClick(Sender: TObject);
+    procedure DirEditCopyOptionsFromChange(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    gBackupDir, gConfigDir, gAppDatDir: string;
+  public
+
+  end;
+const
+  DS=DirectorySeparator;
+  LE=LineEnding;
+  ENVOPTFILENAME='environmentoptions.xml';
+var
+  MainForm: TMainForm;
+
+implementation
+
+{$R *.lfm}
+
+{ TMainForm }
+
+function ReadTag(aFileName: string; aTag: string): string;
+{ find tag then return value within quotes, value must be on the same line as the tag }
+{ example: <LazarusDirectory Value="C:\lazarus\182"> returns text within quotes}
+{ example: --primary-config-path=C:\lazarus\182 returns text after equals sign }
+var
+  q1, q2: integer;
+  aList: TStringList;
+  aLine: string;
+begin
+  Result:='';
+  if not FileExists(aFileName) then exit;
+  try
+    aList:=TSTringList.Create;
+    aList.LoadFromFile(aFileName);
+    for aLine in aList do begin
+      if Length(aLine) > 0 then begin
+        if aLine.Contains(aTag) then begin
+          if aLine.Contains('"') then begin
+            q1:=aLine.IndexOf('"');
+            q2:=aLine.LastIndexOf('"');
+            Result:=Copy(aLine,q1+2,q2-q1-1);
+            break;
+          end else begin
+            q1:=aLine.IndexOf('=');
+            Result:=Copy(aLine,q1+2,aLine.Length);
+            break;
+          end;
+        end;
+      end;
+    end;
+  finally
+    FreeAndNil(aList);
+  end;
+end;
+function TestExit: integer;
+begin
+  exit(0);
+end;
+
+procedure TMainForm.ButtonCopyConfigClick(Sender: TObject);
+{ copy config files - for backup and troubleshooting }
+{ don't create lazarus.cfg in lazarus directory? }
+{ lazarus.cfg = '--primary-config-path=C:\Users\Jim\AppData\Local\lazarus\182' }
+
+var
+  i: integer;
+  r: boolean;
+  errCode: integer;
+  OldLazDir, NewLazDir: string;
+  OldCfgDir, NewCfgDir: string;
+  sourceEnvFile: string;
+  dirList: TStringList;
+  aXMLFile, aFileList: TStringList;
+  aFile: string;
+
+begin
+
+  { get dirs }
+  SourceEnvFile:=JoinPath(DirEditCopyConfigFrom.Text, ENVOPTFILENAME);
+  OldLazDir:=ReadTag(SourceEnvFile,'LazarusDirectory');
+
+  OldCfgDir:=DirEditCopyConfigFrom.Text;
+  NewCfgDir:=DirEditCopyConfigTo.Text;
+
+  NewLazDir:=JoinPath(ParentPath(OldLazDir), ChildPath(NewCfgDir));
+
+  MemoCopyConfig.Clear;
+
+  if not DirectoryExists(OldCfgDir) then begin
+    MemoCopyConfig.Append('"From:" directory does not exist');
+    exit;
+  end;
+
+  { no need to backup all config files just in case }
+
+  { inform user }
+  MemoCopyConfig.Append('Copy config files ...');
+
+  { Copy the config files, do not delete the \lazarus parent dir }
+  if SameFileName(ChompPathDelim(OldCfgDir),ChompPathDelim(gConfigDir)) then begin
+
+    if not CopyDirWin(OldCfgDir, NewCfgDir) then begin
+      MemoCopyConfig.Append('Error copying confg files');
+      exit;
+    end;
+
+  end else begin
+
+    if not CopyDirWin(OldCfgDir, NewCfgDir) then begin
+      MemoCopyConfig.Append('Error copying config directory');
+      exit;
+    end;
+{
+    ErrCode:=CopyDirWinEC(OldCfgDir, NewCfgDir);
+    if ErrCode >0 then begin
+      MemoCopyConfig.Append('Error copying config dir, err='+ErrCode.ToString);
+      exit;
+    end;
+}
+  end;
+
+  { update references in config files }
+
+   aXMLFile:=TStringList.Create;
+   aFileList:=TStringList.Create;
+   aFileList:=FindAllFiles(NewCfgDir,'*.xml');
+
+   for aFile in aFileList do begin
+     aXMLFile.LoadFromFile(aFile);
+     aXMLFile.Text:=StringReplace(aXMLFile.Text,OldLazDir,NewLazDir,[rfReplaceAll]);
+     aXMLFile.Text:=StringReplace(aXMLFile.Text,OldCfgDir,NewCfgDir,[rfReplaceAll]);
+     aXMLFile.SavetoFile(aFile);
+   end;
+
+   FreeAndNil(aXMLFile);
+   FreeAndNil(aFileList);
+
+  MemoCopyConfig.Append('Done.');
+
+end;
+
+procedure TMainForm.ButtonMoveConfigClick(Sender: TObject);
+{ move config files, then create lazarus.cfg in lazarus directory }
+{ lazarus.cfg = '-pcp C:\Users\Jim\AppData\Local\lazarus\182' }
+{ lazarus.cfg = '--primary-config-path=C:\Users\Jim\AppData\Local\lazarus\182' }
+
+var
+  i: integer;
+  sourceDir, targetDir: string;
+  sourceEnvFile,targetEnvFile: string;
+  lazDir: string;
+  cfgLine: string;
+  r: boolean;
+  dirList: TStringList;
+
+begin
+  sourceDir:=DirEditMoveConfigFrom.Text;
+  targetDir:=DirEditMoveConfigTo.Text;
+
+  sourceEnvFile:=TrimFilename(sourceDir+DS+ENVOPTFILENAME);
+  targetEnvFile:=TrimFilename(targetDir+DS+ENVOPTFILENAME);
+
+  MemoMoveConfig.Clear;
+
+  if not DirectoryExists(sourceDir) then begin
+    MemoMoveConfig.Append('"From:" directory does not exist');
+    exit;
+  end;
+
+  if not FileExists(sourceEnvFile) then begin
+    MemoMoveConfig.Append('"From:" directory is not a valid config directory');
+    exit;
+  end;
+
+  { backup all config files just in case }
+  MemoMoveConfig.Append('Backup configs to: '+gBackupDir);
+
+  if not CopyDirWin(gConfigDir,gBackupDir)
+      then MemoMoveConfig.Append('Error backing up config files.');
+
+  { get list of first level sub dirs }
+  dirList:=TStringList.Create;
+  dirList:=FindAllDirectories(sourceDir, false);
+
+  { create sub dirs in target not containing config files, do not create \subdir\subdir }
+  for i:=0 to dirList.Count-1 do begin
+    if not FileExistsUTF8(JoinPath(dirList[i],ENVOPTFILENAME)) then
+      if not (ChildPath(dirList[i])=ChildPath(targetDir)) then
+        ForceDirectory(JoinPath(targetDir,ChildPath(dirList[i])));
+  end;
+
+  { inform user }
+  CopyOptionsMemo.Append('Move config files ...');
+
+  { move the config files, do not delete the \lazarus parent dir }
+  if SameFileName(ChompPathDelim(sourceDir),ChompPathDelim(gConfigDir)) then begin
+    if not CopyDirWin(sourceDir, targetDir) then begin
+      MemoMoveConfig.Append('Error moving confg files');
+      exit;
+    end;
+    if not DelDirWin(sourceDir) then begin
+      MemoMoveConfig.Append('Error moving confg files');
+      exit;
+    end;
+  end else begin
+    if not CopyDirWin(sourceDir, targetDir) then begin
+      MemoMoveConfig.Append('Error moving config directory');
+      exit;
+    end;
+    if not DelDirWin(sourceDir) then begin
+      MemoMoveConfig.Append('Error moving config directory');
+      exit;
+    end;
+  end;
+
+  { delete sub dirs in source not containing config files }
+  for i:=0 to dirList.Count-1 do begin
+    if not FileExistsUTF8(JoinPath(dirList[i],ENVOPTFILENAME)) then
+      if not (ChildPath(dirList[i])=ChildPath(targetDir)) then
+        DeleteDirectory(dirList[i], false);
+  end;
+
+  { create a new lazarus.cfg file referencing the new config dir }
+  cfgLine:='--primary-config-path='+targetDir;
+  lazDir:=ReadTag(targetEnvFile,'LazarusDirectory');
+
+  with TStringList.Create do
+    try
+      Add(cfgLine);
+      SaveToFile(JoinPath(lazDir,'lazarus.cfg'));
+    finally
+      Free;
+    end;
+
+  dirList.Free;
+
+  MemoMoveConfig.Append('Done.');
+
+end;
+
+procedure TMainForm.ButtonCopyOptionsClick(Sender: TObject);
+var
+  source, target: string;
+  SourceEnvFile: string;
+  SourceCfgFile: string;
+  OldLazDir, NewLazDir: string;
+  OldCfgDir, NewCfgDir: string;
+  i: integer;
+  r: boolean;
+  aXMLFile, aFileList: TStringList;
+  aFile: string;
+begin
+
+  CopyOptionsMemo.Clear;
+
+  { get dirs }
+  SourceEnvFile:=JoinPath(DirEditCopyOptionsFrom.Text, ENVOPTFILENAME);
+  OldLazDir:=ReadTag(SourceEnvFile,'LazarusDirectory');
+
+  SourceCfgFile:=JoinPath(OldLazDir, 'lazarus.cfg');
+  OldCfgDir:=ReadTag(SourceCfgFile, '--primary-config-path');
+
+  NewCfgDir:=DirEditCopyOptionsTo.Text;
+  NewLazDir:=JoinPath(ParentPath(OldLazDir), ChildPath(NewCfgDir));
+
+  { backup all config files just in case }
+  CopyOptionsMemo.Append('Backup configs to: '+gBackupDir);
+
+  if not CopyDirWin(gConfigDir,gBackupDir) then
+    CopyOptionsMemo.Append('Error backing up config files.');
+
+  CopyOptionsMemo.Append('Copy config files ...');
+
+  for i:=0 to OptionFileList.Items.Count-1 do begin
+    if OptionFileList.Selected[i]=true then begin
+      source:=TrimFilename(OptionFileList.Directory+DS+OptionFileList.Items[i]);
+      target:=TrimFilename(DirEditCopyOptionsTo.Text+DS+OptionFileList.Items[i]);
+      r:=CopyFileWin(source, target, [cffOverwriteFile]);
+      if not r then CopyOptionsMemo.Append('Error copying '+OptionFileList.Items[i]);
+    end;
+  end;
+
+  aXMLFile:=TStringList.Create;
+  aFileList:=TStringList.Create;
+  aFileList:=FindAllFiles(NewCfgDir,'*.xml');
+
+  for aFile in aFileList do begin
+    aXMLFile.LoadFromFile(aFile);
+    aXMLFile.Text:=StringReplace(aXMLFile.Text,OldLazDir,NewLazDir,[rfReplaceAll]);
+    aXMLFile.Text:=StringReplace(aXMLFile.Text,OldCfgDir,NewCfgDir,[rfReplaceAll]);
+    aXMLFile.SavetoFile(aFile);
+  end;
+
+  CopyOptionsMemo.Append('Done.');
+
+  FreeAndNil(aXMLFile);
+  FreeAndNil(aFileList);
+
+end;
+
+procedure TMainForm.DirEditCopyOptionsFromChange(Sender: TObject);
+var
+  cfgFilePrimary: string;
+  i: integer;
+begin
+
+  cfgFilePrimary:=TrimFilename(DirEditCopyOptionsFrom.Text+DS+'lazarus.cfg');
+  OptionFileList.Sorted:=true;
+  OptionFileList.Mask:='*.xml';
+
+  OptionFileList.Directory:=ReadTag(cfgFilePrimary,'--primary-config-path');
+
+  if OptionFileList.Directory='' then
+     OptionFileList.Directory:=DirEditCopyOptionsFrom.Text;
+
+  for i:=0 to OptionFileList.Items.Count-1 do begin
+    if  (OptionFileList.Items[i]='codetoolsoptions.xml') or
+        (OptionFileList.Items[i]='editoroptions.xml') or
+        (OptionFileList.Items[i]=ENVOPTFILENAME) or
+        (OptionFileList.Items[i]='projectoptions.xml') or
+        (OptionFileList.Items[i]='fpcdefines.xml') then
+          OptionFileList.Selected[i]:=true;
+  end;
+
+end;
+procedure TMainForm.FormShow(Sender: TObject);
+var
+  fileList: TStringList;
+begin
+  DebugForm.Show;
+  DebugLn('Ready');
+
+  gAppDatDir:=SysUtils.GetEnvironmentVariable('LOCALAPPDATA');
+  //gConfigDir:=AppendPathDelim(gAppDatDir)+'lazarus';
+  gConfigDir:=AppendPathDelim(gAppDatDir)+'lazarus-test';
+  gBackupDir:=gConfigDir+'-backup';
+
+  fileList:=TStringList.Create;
+
+  { set config source }
+  if FileExists(JoinPath(gAppDatDir, ENVOPTFILENAME)) then begin
+      DirEditCopyConfigFrom.Text:=gAppDatDir;
+      DirEditMoveConfigFrom.Text:=gAppDatDir;
+      DirEditCopyOptionsFrom.Text:=gAppDatDir;
+  end else begin
+    FindAllFiles(fileList, gConfigDir, ENVOPTFILENAME);
+    if fileList.Count>0 then begin
+        fileList.Sort;
+        DirEditCopyConfigFrom.Text:=ExtractFilePath(fileList[0]);
+        DirEditMoveConfigFrom.Text:=ExtractFilePath(fileList[0]);
+        DirEditCopyOptionsFrom.Text:=ExtractFilePath(fileList[0]);
+    end else begin
+        DirEditCopyConfigFrom.Text:=gAppDatDir;
+        DirEditMoveConfigFrom.Text:=gAppDatDir;
+        DirEditCopyOptionsFrom.Text:=gAppDatDir;
+    end;
+  end;
+
+  DirEditCopyConfigTo.Text:=gConfigDir;
+  DirEditMoveConfigTo.Text:=gConfigDir;
+  DirEditCopyOptionsTo.Text:=gConfigDir;
+
+  OptionFileList.Clear;
+  DirEditCopyOptionsFromChange(nil);
+
+  PageControl.ActivePage:=HelpSheet;
+
+  FreeAndNil(fileList);
+
+end;
+
+end.

@@ -1,0 +1,81 @@
+object Form1: TForm1
+  Left = 351
+  Height = 425
+  Top = 250
+  Width = 977
+  ActiveControl = Memo1
+  Caption = 'WinInfo'
+  ClientHeight = 425
+  ClientWidth = 977
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object Memo1: TMemo
+    Left = 21
+    Height = 347
+    Top = 20
+    Width = 940
+    Lines.Strings = (
+      'There will be an optional delay after pressing "List" to give the user time to open any windows or toolbars to include in the list.'
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object btnClear: TButton
+    Left = 25
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Clear'
+    OnClick = btnClearClick
+    TabOrder = 1
+  end
+  object btnListAll: TButton
+    Left = 792
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'List All'
+    OnClick = btnListAllClick
+    TabOrder = 2
+  end
+  object btnListVisible: TButton
+    Left = 886
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'List Visible'
+    OnClick = btnListVisibleClick
+    TabOrder = 3
+  end
+  object btnOpen: TButton
+    Left = 520
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Open CSV'
+    OnClick = btnOpenClick
+    TabOrder = 4
+  end
+  object SpinEdit1: TSpinEdit
+    Left = 728
+    Height = 23
+    Top = 386
+    Width = 43
+    MaxValue = 99
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Left = 616
+    Height = 25
+    Top = 386
+    Width = 91
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Delay Seconds:'
+    Layout = tlCenter
+    ParentColor = False
+  end
+end

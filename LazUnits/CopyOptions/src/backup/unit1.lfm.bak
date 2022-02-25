@@ -1,0 +1,293 @@
+object MainForm: TMainForm
+  Left = 351
+  Height = 505
+  Top = 250
+  Width = 595
+  ActiveControl = PageControl
+  Caption = 'Lazarus Config Utility'
+  ClientHeight = 505
+  ClientWidth = 595
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object PageControl: TPageControl
+    Left = 8
+    Height = 488
+    Top = 8
+    Width = 576
+    ActivePage = TabSheetCopyConfig
+    TabIndex = 1
+    TabOrder = 0
+    object HelpSheet: TTabSheet
+      Caption = 'Help'
+      ClientHeight = 460
+      ClientWidth = 568
+      object HelpMemo: TMemo
+        Left = 8
+        Height = 432
+        Top = 16
+        Width = 546
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        Lines.Strings = (
+          '  The Lazarus Config Utility is used to'
+          '    1. Move the configuration directory, typically for multiple lazarus instances'
+          '    2. Copy options, typically to set user saved options for new installs'
+          ''
+          '  Move Config Directory'
+          ''
+          '  A Lazarus install on Windows defaults to'
+          '    user choice install folder, e.g. ''c:\lazarus'''
+          '    default config folder %LOCALAPPDATA%\lazarus'
+          ''
+          '  Use this utility to move the default config folder, for example:'
+          '    from: %LOCALAPPDATA%\lazarus'
+          '    to:   %LOCALAPPDATA%\lazarus\182'
+          ''
+          '  This is not needed for proper Lazarus operation,'
+          '    but it keeps multiple installs neatly organized and self-documented'
+          ''
+          '  Then you can install an additional instance with a different config dir, for example:'
+          '    %LOCALAPPDATA%\lazarus\184'
+          ''
+          '  Copy Options'
+          ''
+          '  Many of your favorite IDE options are saved in xml files:'
+          '    editoroptions.xml       background color, page width, tab stops, etc.'
+          '    environmentoptions.xml  IDE Coolbar with "Run without debugging" button, etc.'
+          '    projectoptions.xml      Defaults for a New Project, e.g. Build modes, etc.'
+          ''
+          '    WARNING'
+          '    You cannot just edit the xml file and expect the changes to appear in the IDE.'
+          '    Many settings, such as installed packages, require an IDE build.'
+        )
+        ParentFont = False
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        WordWrap = False
+      end
+    end
+    object TabSheetCopyConfig: TTabSheet
+      Caption = 'Copy Config'
+      ClientHeight = 460
+      ClientWidth = 568
+      object DirEditCopyConfigFrom: TDirectoryEdit
+        Left = 64
+        Height = 23
+        Top = 16
+        Width = 482
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 0
+        OnChange = DirEditCopyOptionsFromChange
+      end
+      object DirEditCopyConfigTo: TDirectoryEdit
+        Left = 64
+        Height = 23
+        Top = 56
+        Width = 482
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 1
+        OnChange = DirEditCopyOptionsFromChange
+      end
+      object MemoCopyConfig: TMemo
+        Left = 18
+        Height = 259
+        Top = 96
+        Width = 526
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        ParentFont = False
+        ScrollBars = ssAutoBoth
+        TabOrder = 2
+      end
+      object ButtonCopyConfig: TButton
+        Left = 503
+        Height = 24
+        Top = 369
+        Width = 40
+        Caption = 'Copy'
+        OnClick = ButtonCopyConfigClick
+        TabOrder = 3
+      end
+      object LabelCopyConfigFrom: TLabel
+        Left = 21
+        Height = 15
+        Top = 18
+        Width = 31
+        Caption = 'From:'
+        ParentColor = False
+      end
+      object LabelCopyConfigTo: TLabel
+        Left = 21
+        Height = 15
+        Top = 56
+        Width = 16
+        Caption = 'To:'
+        ParentColor = False
+      end
+    end
+    object TabSheetMoveConfig: TTabSheet
+      Caption = 'Move Config'
+      ClientHeight = 460
+      ClientWidth = 568
+      object DirEditMoveConfigFrom: TDirectoryEdit
+        Left = 64
+        Height = 23
+        Top = 16
+        Width = 482
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 0
+        OnChange = DirEditCopyOptionsFromChange
+      end
+      object DirEditMoveConfigTo: TDirectoryEdit
+        Left = 64
+        Height = 23
+        Top = 56
+        Width = 482
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 1
+        OnChange = DirEditCopyOptionsFromChange
+      end
+      object MemoMoveConfig: TMemo
+        Left = 18
+        Height = 259
+        Top = 96
+        Width = 526
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        ParentFont = False
+        ScrollBars = ssAutoBoth
+        TabOrder = 2
+      end
+      object ButtonMoveConfig: TButton
+        Left = 503
+        Height = 24
+        Top = 369
+        Width = 40
+        Caption = 'Move'
+        OnClick = ButtonMoveConfigClick
+        TabOrder = 3
+      end
+      object LabelMoveConfigFrom: TLabel
+        Left = 21
+        Height = 15
+        Top = 18
+        Width = 31
+        Caption = 'From:'
+        ParentColor = False
+      end
+      object LabelMoveConfigTo: TLabel
+        Left = 21
+        Height = 15
+        Top = 56
+        Width = 16
+        Caption = 'To:'
+        ParentColor = False
+      end
+    end
+    object TabSheetCopyOptions: TTabSheet
+      Caption = 'Copy Options'
+      ClientHeight = 460
+      ClientWidth = 568
+      object ButtonCopyOptions: TButton
+        Left = 489
+        Height = 22
+        Top = 424
+        Width = 57
+        Caption = 'Copy'
+        OnClick = ButtonCopyOptionsClick
+        TabOrder = 0
+      end
+      object OptionFileList: TFileListBox
+        Left = 16
+        Height = 205
+        Top = 96
+        Width = 529
+        Directory = 'C:\lazarus\184'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        ItemHeight = 16
+        MultiSelect = True
+        ParentFont = False
+        TabOrder = 1
+      end
+      object DirEditCopyOptionsFrom: TDirectoryEdit
+        Left = 64
+        Height = 23
+        Top = 16
+        Width = 482
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 3
+        OnChange = DirEditCopyOptionsFromChange
+      end
+      object DirEditCopyOptionsTo: TDirectoryEdit
+        Left = 64
+        Height = 23
+        Top = 56
+        Width = 480
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object LabelCopyOptionsFrom: TLabel
+        Left = 21
+        Height = 15
+        Top = 18
+        Width = 31
+        Caption = 'From:'
+        ParentColor = False
+      end
+      object LabelCopyOptionsTo: TLabel
+        Left = 21
+        Height = 15
+        Top = 56
+        Width = 16
+        Caption = 'To:'
+        ParentColor = False
+      end
+      object CopyOptionsMemo: TMemo
+        Left = 16
+        Height = 92
+        Top = 312
+        Width = 529
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        ParentFont = False
+        TabOrder = 4
+      end
+    end
+  end
+end

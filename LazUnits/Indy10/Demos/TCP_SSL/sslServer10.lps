@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="9">
+      <Unit0>
+        <Filename Value="sslServer10.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="sslServer10Main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UsageCount Value="20"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="E:\Indy10.6.2.5494_indy.fulgan.com\Lib\Core\IdContext.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="E:\Indy10.6.2.5494_indy.fulgan.com\Lib\Core\IdServerIOHandler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="E:\Indy10.6.2.5494_indy.fulgan.com\Lib\Core\IdTCPServer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="E:\Indy10.6.2.5494_indy.fulgan.com\Lib\Protocols\IdSSL.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="E:\Indy10.6.2.5494_indy.fulgan.com\Lib\Protocols\IdSSLOpenSSL.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="E:\Indy10.6.2.5494_indy.fulgan.com\Lib\System\IdBaseComponent.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="E:\Indy10.6.2.5494_indy.fulgan.com\Lib\System\IdComponent.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit8>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+  </ProjectSession>
+</CONFIG>

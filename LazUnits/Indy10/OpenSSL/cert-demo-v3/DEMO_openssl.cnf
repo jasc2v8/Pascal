@@ -1,0 +1,25 @@
+[req]
+prompt = no
+default_bits = 2048
+default_md = sha256
+distinguished_name = dn
+x509_extensions = v3_ca
+
+[dn]
+C = US
+ST = CA
+L = DEMO
+O = DEMO
+OU = DEMO
+emailAddress = webmaster@localhost.com
+CN = localhost.com
+
+[v3_ca]
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+basicConstraints = critical, CA:true
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = localhost
+IP.1  = 127.0.0.1

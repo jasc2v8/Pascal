@@ -1,0 +1,41 @@
+object Form1: TForm1
+  Left = 0
+  Height = 480
+  Top = 0
+  Width = 640
+  Caption = 'File Lister Example'
+  ClientHeight = 480
+  ClientWidth = 640
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object Memo1: TMemo
+    Left = 9
+    Height = 384
+    Top = 48
+    Width = 615
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object ButtonStart: TButton
+    Left = 584
+    Height = 24
+    Top = 440
+    Width = 40
+    Caption = 'Start'
+    OnClick = ButtonStartClick
+    TabOrder = 1
+  end
+  object DirectoryEdit: TDirectoryEdit
+    Left = 8
+    Height = 23
+    Top = 8
+    Width = 616
+    ShowHidden = False
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="no-js hasSidebar hasPageActions hasBreadcrumb conceptual" lang="en-us" dir="ltr" data-authenticated="false" data-target="docs">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Getting Started with Windows Forms" />
+	<meta property="og:image" content="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/microsoft-header.png" />
+
+
+		<meta name="ms.devlang" content="dotnet" />
+<meta name="author" content="dotnet-bot" />
+<meta name="ms.author" content="dotnetcontent" />
+<meta name="breadcrumb_path" content="/dotnet/breadcrumb/toc.json" />
+<meta name="apiPlatform" content="dotnet" />
+<meta name="ms.topic" content="conceptual" />
+<meta name="ms.technology" content="dotnet-winforms" />
+<meta name="ms.prod" content="dotnet-framework" />
+<meta name="uhfHeaderId" content="MSDocsHeader-DotNet" />
+<meta name="ms.assetid" content="a031aa58-5027-4082-b590-df7c12c77dec" />
+<meta name="ms.date" content="03/30/2017" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="search.ms_docsetname" content="core-docs" />
+<meta name="locale" content="en-us" />
+<meta name="site_name" content="Docs" />
+<meta name="search.ms_product" content="VS" />
+<meta name="depot_name" content="VS.core-docs" />
+<meta name="updated_at" content="2018-05-04 04:36 AM" />
+<meta name="gitcommit" content="https://github.com/dotnet/docs/blob/10de0a293347bd518f1f1253bc26e465d7108feb/docs/framework/winforms/getting-started-with-windows-forms.md" />
+<meta name="original_content_git_url" content="https://github.com/dotnet/docs/blob/live/docs/framework/winforms/getting-started-with-windows-forms.md" />
+<meta name="document_id" content="82facee6-f1e6-f2aa-56c2-967708b2389f" />
+<meta name="document_version_independent_id" content="cb2a1803-98a7-7900-bf20-281b6c55197e" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="toc.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/VS.core-docs/{branchName}{pdfName}" />
+<meta name="search.mshattr.devlang" content="csharp" />
+<meta name="word_count" content="298" />
+
+	<meta name="scope" content=".NET" />
+<link href="https://docs.microsoft.com/en-us/dotnet/framework/winforms/getting-started-with-windows-forms" rel="canonical">
+	<title>Getting Started with Windows Forms | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/css/b3687bf5.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/css/e562b38f.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data:{
+			azureHeaderLocale: 'en-us',
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasComments: true,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'dotnet/docs',
+			feedbackProductUrl: 'https://developercommunity.visualstudio.com/spaces/61/index.html',
+			contentGitUrl: 'https://github.com/dotnet/docs/blob/master/docs/framework/winforms/getting-started-with-windows-forms.md',
+			forceVersionPicker:false		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: false,
+			enableUHFPPE: true
+		}
+	};
+	if (!('Promise' in window && 'resolve' in window.Promise && 'reject' in window.Promise && 'all' in window.Promise && 'race' in window.Promise)) {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/6ee34c01.bluebird.min.js"><\/script>');
+	}
+	if (typeof fetch !== 'function') {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/d9fc435c.fetch.min.js"><\/script>');
+	}
+	</script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/js/de980046.localized-strings.js"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/js/79987ada.global.min.js"></script>
+
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder">
+		<div id="headerAreaHolder" data-bi-name="header">
+			<div id="uhf-placeholder"></div>
+		</div>
+	<div class="content-header uhf-container has-padding" data-bi-name="content-header">
+		<nav class="has-padding-none-mobile" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+		<ul class="breadcrumbs">
+		</ul>
+		</nav>
+		<div class="content-header-controls exit-focus">
+			<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse">
+				<span class="icon"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit focus mode</span>
+			</button>
+			
+		</div>
+		<div class="content-header-controls">
+			<button type="button" class="contents-button button" data-bi-name="contents-expand">
+				<span class="icon"><span class="docon docon-menu"></span></span>
+				<span>Contents</span>
+			</button>
+		</div>
+		<div class="action-bar">
+			<ul class="action-list">
+						<li>
+							<a href="#feedback" class="button is-text is-size-7 is-icon-only-touch" data-bi-name="comments">
+								<span class="icon">
+									<span class="docon docon-comment-lines" aria-hidden="true"></span>
+								</span>
+								<span class="action-item-text">Feedback</span>
+							</a>
+						</li>
+							<li id="contenteditbtn">
+									<a href="https://github.com/dotnet/docs/blob/master/docs/framework/winforms/getting-started-with-windows-forms.md" class="button is-text is-icon-only-touch is-size-7" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://github.com/dotnet/docs/blob/live/docs/framework/winforms/getting-started-with-windows-forms.md">
+									<span class="icon"> 
+										<span class="docon docon-edit-outline" aria-hidden="true"></span>
+									</span>
+									<span class="action-item-text">Edit</span>
+								</a>
+							</li>
+				<li>
+					<div class="sharing dropdown has-caret" auto-align>
+						<a href="#" class="dropdown-trigger button is-text is-size-7 is-icon-only-touch" aria-haspopup="true" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+							<span class="icon">
+								<span class="docon docon-sharing" aria-hidden="true"></span>
+							</span>
+							<span class="action-item-text">Share</span>
+						</a>
+						<div class="dropdown-menu" id="sharing-menu" role="menu">
+							<ul data-bi-name="share-links">
+								<li><a class="share-twitter" data-bi-name="twitter">
+									<span class="icon">
+										<span class="docon docon-brand-twitter" aria-hidden="true"></span>
+									</span>
+									<span>Twitter</span></a></li>
+								<li><a class="share-linkedin" data-bi-name="linkedin">
+									<span class="icon">
+										<span class="docon docon-brand-linkedin" aria-hidden="true"></span>
+									</span>
+									<span>LinkedIn</span></a></li>
+								<li><a class="share-facebook" data-bi-name="facebook">
+									<span class="icon">
+										<span class="docon docon-brand-facebook" aria-hidden="true"></span>
+									</span>
+									<span>Facebook</span></a></li>
+								<li><a class="share-email" data-bi-name="email">
+									<span class="icon">
+										<span class="docon docon-mail-message-fill" aria-hidden="true"></span>
+									</span>
+									<span>Email</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<button class="toggle-theme button is-text is-size-7 is-icon-only-touch" aria-label="toggle-theme" data-bi-name="select-theme">
+						<span class="icon">
+							<span class="docon docon-sun"></span>
+						</span>
+						<span class="action-item-text">Theme</span>
+					</button>
+				</li>
+				<li class="is-unstyled-action-list-item">
+					<a class="docs-sign-in not-authenticated button is-text has-text-primary is-size-7" href="#">Sign in</a>
+					<div class="dropdown has-caret authenticated" auto-align>
+						<button class="dropdown-trigger button is-text is-radiusless" aria-label="Your Account" aria-haspopup="true" aria-controls="user-menu" aria-expanded="false">
+							<span class="image icon is-hidden-mobile" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+							<span class="is-size-7 is-truncated is-hidden-mobile" data-profile-property="userName"></span>
+							<span class="image icon is-hidden-tablet has-margin-none" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+						</button>
+						<div class="dropdown-menu box" id="user-menu" role="menu">
+							<div class="media is-user-dir">
+								<div class="media-left">
+									<span class="image is-64x64" aria-hidden="true">
+										<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+									</span>
+								</div>
+								<div class="media-content">
+									<p class="title has-margin-top-small">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="userName"></span>
+									</p>
+									<p class="subtitle">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="upn"></span>
+									</p>
+								</div>
+							</div>
+							<ul class="is-unstyled has-margin-none">
+								<li><a href="/profile" data-profile-property="profileUrl">Profile</a></li>
+								<li><a class="docs-sign-out" href="#">Sign out</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="contents-button" aria-label="Contents" data-bi-name="contents-expand-">
+				<span class="docon docon-editor-list-bullet"></span><span>Contents</span>
+			</button>
+		</div>
+	</div>
+	<div id="disclaimer-holder" class="disclaimer-holder"></div>
+	</div>
+
+	<div class="mainContainer uhf-container  has-top-padding " data-bi-name="body">
+		
+		<div class="columns ">
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns ">
+
+					<div id="page-actions" class="right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+							<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation">
+								<h3>In this article</h3>
+							</nav>
+					</div>
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+					
+					<main id="main" role="main" class="content" data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="getting-started-with-windows-forms" sourcefile="docs/framework/winforms/getting-started-with-windows-forms.md" sourcestartlinenumber="12" sourceendlinenumber="12">Getting Started with Windows Forms</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li class="displayDate loading">
+								<span aria-hidden="true" class="docon docon-calendar"></span>
+								<time role="presentation" datetime="2017-03-30T00:00:00.000Z" data-article-date-source="ms.date">03/30/2017</time>
+							</li>
+								<li class="readingTime">
+									<span aria-hidden="true" class="docon docon-clock"></span>
+									2 minutes to read
+								</li>
+							<li class="contributors-holder">
+								<span class="contributors-text">Contributors</span>
+								<ul class="contributors" data-bi-name="contributors">
+											<li><a href="https://github.com/dotnet-bot" title="dotnet bot" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/dotnet-bot.png?size=32" alt="dotnet bot"></a></li>
+											<li><a href="https://github.com/mairaw" title="Maira Wenzel" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/mairaw.png?size=32" alt="Maira Wenzel"></a></li>
+											<li><a href="https://github.com/Mikejo5000" title="Mike Jones" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/Mikejo5000.png?size=32" alt="Mike Jones"></a></li>
+											<li><a href="https://github.com/mikeblome" title="Mike B" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/mikeblome.png?size=32" alt="Mike B"></a></li>
+											<li><a href="https://github.com/guardrex" title="Luke Latham" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/guardrex.png?size=32" alt="Luke Latham"></a></li>
+											<li><a href="https://github.com/dotnet/docs/blob/master/docs/framework/winforms/getting-started-with-windows-forms.md" title="all 7 contributors" data-bi-name="contributorshowall"><span aria-hidden="true">all</span></a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation">
+							<h3>In this article</h3>
+						</nav>
+
+
+
+						<!-- <content> -->
+							
+<p>With Windows Forms, you can create powerful Windows-based applications. The following topics describe in-depth how to harness the power of Windows Forms to display data, handle user input, and deploy your applications easily and with enhanced security.  </p>
+<h2 id="in-this-section">In This Section</h2>
+<p> <a href="windows-forms-overview" data-linktype="relative-path">Windows Forms Overview</a><br> Contains an overview of Windows Forms and smart client applications.  </p>
+<p> <a href="creating-a-new-windows-form" data-linktype="relative-path">Creating a New Windows Form</a><br> Contains links to topics that describe basic concepts for creating Windows Forms applications.  </p>
+<p> <a href="creating-event-handlers-in-windows-forms" data-linktype="relative-path">Creating Event Handlers in Windows Forms</a><br> Contains links to topics that describe how to create Windows Forms event handlers.  </p>
+<p> <a href="adjusting-the-size-and-scale-of-windows-forms" data-linktype="relative-path">Adjusting the Size and Scale of Windows Forms</a><br> Contains links to topics that show how to adjust the size and scale of Windows Forms.  </p>
+<p> <a href="changing-the-appearance-of-windows-forms" data-linktype="relative-path">Changing the Appearance of Windows Forms</a><br> Contains links to topics that show how to change the appearance of Windows Forms applications.  </p>
+<p> <a href="controls/index" data-linktype="relative-path">Windows Forms Controls</a><br> Contains links to topics that describe and show how to use Windows Forms controls and components.  </p>
+<p> <a href="user-input-in-windows-forms" data-linktype="relative-path">User Input in Windows Forms</a><br> Contains links to topics that describe and show how to handle input from the user in Windows Forms applications.  </p>
+<p> <a href="dialog-boxes-in-windows-forms" data-linktype="relative-path">Dialog Boxes in Windows Forms</a><br> Contains links to topics that describe the different dialog boxes for use in Windows Forms.  </p>
+<p> <a href="windows-forms-data-binding" data-linktype="relative-path">Windows Forms Data Binding</a><br> Contains links to topics that describe the Windows Forms data binding architecture and how to use it in Windows Forms applications.  </p>
+<p> <a href="windows-forms-security" data-linktype="relative-path">Windows Forms Security</a><br> Contains links to topics that describe how to build Windows Forms applications that have enhanced security.  </p>
+<p> <a href="clickonce-deployment-for-windows-forms" data-linktype="relative-path">ClickOnce Deployment for Windows Forms</a><br> Contains links to topics that describe how to easily deploy Windows Forms applications.  </p>
+<p> <a href="how-to-access-keyed-collections-in-windows-forms" data-linktype="relative-path">How to: Access Keyed Collections in Windows Forms</a><br> Demonstrates how to access collections with keys rather than indexes.  </p>
+<h2 id="related-sections">Related Sections</h2>
+<p> <a href="advanced/index" data-linktype="relative-path">Enhancing Windows Forms Applications</a><br> Contains links to topics that describe more advanced concepts for creating Windows Forms applications.</p>
+
+						<!-- </content> -->
+							
+						</main>
+
+						<!-- feedback section -->
+
+
+				
+<section class="feedback-section" data-bi-name="feedback-section">
+	<h2 id="feedback">Feedback</h2>
+
+	<div class="alert choose-feedback-type">
+		<p>
+We'd love to hear your thoughts. Choose the type you'd like to provide:		</p>
+
+		<div class="choose-feedback-buttons">
+			<a class="button feedback-type-product has-margin-bottom-small" href="https://developercommunity.visualstudio.com/spaces/61/index.html" data-bi-name="product-feedback">
+				<span>Product feedback</span>
+				<span class="icon docon docon-navigate-external" aria-hidden="true"></span>
+			</a>
+
+			<div class="field has-addons is-inline-flex has-margin-bottom-small">
+				<div class="control has-margin-top-none has-margin-bottom-none">
+					<button class="button feedback-sign-in-button has-text-wrap" data-bi-name="feedback-sign-in">
+						<span class="icon docon docon-brand-github" aria-hidden="true"></span>
+						<span>
+							Sign in to give documentation feedback						</span>
+					</button>
+				</div>
+				<div class="control dropdown has-caret has-margin-top-none has-margin-bottom-none" auto-align>
+					<button class="button dropdown-trigger has-text-wrap" aria-haspopup="true" aria-expanded="false" aria-controls="fbm0"
+						aria-label="Expand documentation feedback menu" data-bi-name="documentation-feedback-menu">
+						<span class="icon docon docon-chevron-down-light" aria-hidden="true"></span>
+					</button>
+					<div class="dropdown-menu documentation-feedback-menu" id="fbm0" role="menu">
+						You may also leave feedback <a data-bi-name="create-issue-on-github" href="{0}">directly on GitHub <span class="docon docon-navigate-external" aria-hidden="true"></span></a>.					</div>
+				</div>
+			</div>
+
+			<div class="field has-addons is-inline-flex has-margin-bottom-small" hidden>
+				<div class="control has-margin-top-none has-margin-bottom-none">
+					<button class="button feedback-form-toggle" aria-expanded="false" aria-controls="feedback-form"
+						data-bi-name="documentation-feedback">
+Content feedback					</button>
+				</div>
+				<div class="control dropdown has-caret has-margin-top-none has-margin-bottom-none" auto-align>
+					<button class="button dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="fbm1"
+						aria-label="Expand documentation feedback menu" data-bi-name="documentation-feedback-menu">
+						<span class="icon docon docon-chevron-down-light" aria-hidden="true"></span>
+					</button>
+					<div class="dropdown-menu documentation-feedback-menu" id="fbm1" role="menu">
+						You may also leave feedback <a data-bi-name="create-issue-on-github" href="{0}">directly on GitHub <span class="docon docon-navigate-external" aria-hidden="true"></span></a>.					</div>
+				</div>
+			</div>
+		</div>
+		<p class="has-margin-top-none"><small>Our new feedback system is built on GitHub Issues. Read about this change in <a href="https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs">our blog post</a>.</small></p>
+	</div>
+
+	<form class="feedback-form" id="feedback-form" accept-charset="UTF-8" autocomplete="off" action="javascript:" hidden>
+		<h3 class="feedback-form-heading current-user">
+			<img class="avatar" alt="Avatar" width="36" height="36" aria-hidden="true">
+			<span class="username" aria-hidden="true"></span>
+			<span class="visually-hidden">Liquid error: Can't find the localized string giveDocumentationFeedback for template Conceptual.</span>
+		</h3>
+
+		<label>
+			<span class="visually-hidden">Title</span>
+			<input name="title" type="text" placeholder="Title" required pattern=".*\w.*">
+		</label>
+		<label>
+			<span class="visually-hidden">Leave a comment</span>
+			<textarea name="body" placeholder="Leave a comment" required></textarea>
+		</label>
+
+		<div class="action-container">
+			<button class="button is-primary" type="submit" name="submit">Submit feedback</button>
+		</div>
+	</form>
+
+	<div class="feedback-status alert is-loading" role="alert">
+		<p>Loading feedback...</p>
+	</div>
+
+	<div class="feedback-tab-group tabGroup" data-tab-group-independent hidden>
+		<ul role="tablist">
+			<li role="presentation">
+				<a href="#tabpanel-issues-open" role="tab" aria-controls="tabpanel-issues-open" data-tab="issues-open" aria-label="Open Issues"></a>
+			</li>
+			<li role="presentation">
+				<a href="#tabpanel-issues-closed" role="tab" aria-controls="tabpanel-issues-closed" data-tab="issues-closed"
+				 aria-label="Closed Issues"></a>
+			</li>
+		</ul>
+		<section id="tabpanel-issues-open" role="tabpanel" data-tab="issues-open">
+			<div class="no-issues-placeholder">There are no open issues</div>
+			<ul class="github-issues-list" aria-label="Open Issues"></ul>
+		</section>
+		<section id="tabpanel-issues-closed" role="tabpanel" data-tab="issues-closed">
+			<div class="no-issues-placeholder">There are no closed issues</div>
+			<ul class="github-issues-list" aria-label="Closed Issues"></ul>
+		</section>
+	</div>
+	<div class="action-container">
+		<a class="view-on-github" href="https://github.com/dotnet/docs/issues" data-bi-name="view-on-github"
+		 hidden>
+			<span class="docon docon-brand-github" aria-hidden="true"></span>
+			<span>View on GitHub</span>
+			<span class="docon docon-navigate-external" aria-hidden="true"></span>
+		</a>
+	</div>
+</section>						<!-- end feedback section -->
+
+						<div class="footerContainer is-visible-interactive ">
+<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>						</div>
+					</div>
+
+					<!--end of div.columns -->
+
+				</div>
+			
+			<!--end of .primary-holder -->
+			</section>
+
+				<div id="left-container" class="left-container column is-one-third-tablet is-one-quarter-desktop">
+					<nav class="sidebar" id="sidebar" data-bi-name="left toc" role="navigation" aria-label="Main Navigation">
+						<button class="sidebar-header" type="button" aria-label="Close" data-bi-name="contents-collapse">
+							<span>Contents</span>
+							<span class="docon docon-navigate-close" aria-hidden="true"></span>
+						</button>
+						<div id="sidebarContent">
+							<div class="filterHolder">
+							</div>
+							<nav class="toc"></nav>
+							<div class="pdfDownloadHolder"></div>
+						</div>
+					</nav>
+				</div>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer is-hidden-interactive ">
+<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>	</div>
+
+	<div class="action-panel"></div>
+</body>
+</html>

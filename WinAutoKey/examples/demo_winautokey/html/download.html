@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="no-js hasSidebar hasPageActions hasBreadcrumb landingpage" lang="en-us" dir="ltr" data-authenticated="false" data-target="docs">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Get started with the Universal Windows Platform (UWP) - UWP app developer" />
+	<meta property="og:image" content="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/microsoft-header.png" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+	<meta name="twitter:title" content="Get started with the Universal Windows Platform (UWP) - UWP app developer" />
+	<meta name="twitter:description" content="Get started with the Universal Windows Platform (UWP) and app development for Windows 10." />
+	<meta name="twitter:image" content="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/microsoft-header.png" />
+	<meta name="twitter:image:alt" content="Microsoft Logo" />
+
+		<meta name="Search.Product" content="eADQiWindows 10XVcnh" />
+<meta name="ROBOTS" content="INDEX, FOLLOW" />
+<meta name="htmlDangerZone" content="true" />
+<meta name="breadcrumb_path" content="/windows/uwp/breadcrumbs/toc.json" />
+<meta name="ms.technology" content="get-started" />
+<meta name="ms.prod" content="uwp" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinUWP" />
+<meta name="ms.localizationpriority" content="medium" />
+<meta name="author" content="QuinnRadich" />
+<meta name="description" content="Get started with the Universal Windows Platform (UWP) and app development for Windows 10." />
+<meta name="ms.author" content="quradic" />
+<meta name="keywords" content="get started, windows 10, uwp, xaml, c#" />
+<meta name="ms.topic" content="article" />
+<meta name="ms.date" content="03/23/2018" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="search.ms_docsetname" content="windows-apps" />
+<meta name="version" content="0" />
+<meta name="locale" content="en-us" />
+<meta name="site_name" content="Docs" />
+<meta name="search.ms_product" content="Win" />
+<meta name="depot_name" content="Win.windows-apps" />
+<meta name="updated_at" content="2018-10-25 07:51 PM" />
+<meta name="gitcommit" content="https://cpubwin.visualstudio.com/DefaultCollection/windows-uwp/_git/windows-uwp/commit/6cc275f2151f78db40c11ace381ee2d35f0155f9?path=%2fwindows-apps-src%2fget-started%2findex.md&amp;_a=contents" />
+<meta name="original_content_git_url" content="https://cpubwin.visualstudio.com/DefaultCollection/windows-uwp/_git/windows-uwp?path=%2fwindows-apps-src%2fget-started%2findex.md&amp;version=GBlive&amp;_a=contents" />
+<meta name="document_id" content="c6d761fb-1b88-1a3b-7fdd-b45d12b17575" />
+<meta name="document_version_independent_id" content="4c770eae-0594-617d-477b-fdeda87ca1cf" />
+<meta name="page_type" content="landingpage" />
+<meta name="toc_rel" content="../TOC.json" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/Win.windows-apps/{branchName}{pdfName}" />
+<meta name="word_count" content="222" />
+
+	<meta name="scope" content="UWP" />
+<link href="https://docs.microsoft.com/en-us/windows/uwp/get-started/" rel="canonical">
+	<title>Get started with the Universal Windows Platform (UWP) - UWP app developer | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/css/b3687bf5.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/css/3a752961.landingpage.css ">
+
+
+	<script>
+	var msDocs = {
+		data:{
+			azureHeaderLocale: 'en-us',
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'LandingPage',
+			brand: '',
+			context: {
+
+			},
+			hasComments: false,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'MicrosoftDocs/windows-uwp',
+			feedbackProductUrl: 'https://wpdev.uservoice.com/',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/get-started/index.md',
+			forceVersionPicker:false		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: false,
+			enableUHFPPE: false
+		}
+	};
+	if (!('Promise' in window && 'resolve' in window.Promise && 'reject' in window.Promise && 'all' in window.Promise && 'race' in window.Promise)) {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/6ee34c01.bluebird.min.js"><\/script>');
+	}
+	if (typeof fetch !== 'function') {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/d9fc435c.fetch.min.js"><\/script>');
+	}
+	</script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/js/de980046.localized-strings.js"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/js/79987ada.global.min.js"></script>
+
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder">
+		<div id="headerAreaHolder" data-bi-name="header">
+			<div id="uhf-placeholder"></div>
+		</div>
+	<div class="content-header uhf-container has-padding" data-bi-name="content-header">
+		<nav class="has-padding-none-mobile" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+		<ul class="breadcrumbs">
+		</ul>
+		</nav>
+		<div class="content-header-controls exit-focus">
+			<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse">
+				<span class="icon"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit focus mode</span>
+			</button>
+			
+		</div>
+		<div class="content-header-controls">
+			<button type="button" class="contents-button button" data-bi-name="contents-expand">
+				<span class="icon"><span class="docon docon-menu"></span></span>
+				<span>Contents</span>
+			</button>
+		</div>
+		<div class="action-bar">
+			<ul class="action-list">
+							<li id="contenteditbtn">
+									<a href="https://github.com/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/get-started/index.md" class="button is-text is-icon-only-touch is-size-7" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://cpubwin.visualstudio.com/DefaultCollection/windows-uwp/_git/windows-uwp?path=%2fwindows-apps-src%2fget-started%2findex.md&version=GBlive&_a=contents">
+									<span class="icon"> 
+										<span class="docon docon-edit-outline" aria-hidden="true"></span>
+									</span>
+									<span class="action-item-text">Edit</span>
+								</a>
+							</li>
+				<li>
+					<div class="sharing dropdown has-caret" auto-align>
+						<a href="#" class="dropdown-trigger button is-text is-size-7 is-icon-only-touch" aria-haspopup="true" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+							<span class="icon">
+								<span class="docon docon-sharing" aria-hidden="true"></span>
+							</span>
+							<span class="action-item-text">Share</span>
+						</a>
+						<div class="dropdown-menu" id="sharing-menu" role="menu">
+							<ul data-bi-name="share-links">
+								<li><a class="share-twitter" data-bi-name="twitter">
+									<span class="icon">
+										<span class="docon docon-brand-twitter" aria-hidden="true"></span>
+									</span>
+									<span>Twitter</span></a></li>
+								<li><a class="share-linkedin" data-bi-name="linkedin">
+									<span class="icon">
+										<span class="docon docon-brand-linkedin" aria-hidden="true"></span>
+									</span>
+									<span>LinkedIn</span></a></li>
+								<li><a class="share-facebook" data-bi-name="facebook">
+									<span class="icon">
+										<span class="docon docon-brand-facebook" aria-hidden="true"></span>
+									</span>
+									<span>Facebook</span></a></li>
+								<li><a class="share-email" data-bi-name="email">
+									<span class="icon">
+										<span class="docon docon-mail-message-fill" aria-hidden="true"></span>
+									</span>
+									<span>Email</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<button class="toggle-theme button is-text is-size-7 is-icon-only-touch" aria-label="toggle-theme" data-bi-name="select-theme">
+						<span class="icon">
+							<span class="docon docon-sun"></span>
+						</span>
+						<span class="action-item-text">Theme</span>
+					</button>
+				</li>
+				<li class="is-unstyled-action-list-item">
+					<a class="docs-sign-in not-authenticated button is-text has-text-primary is-size-7" href="#">Sign in</a>
+					<div class="dropdown has-caret authenticated" auto-align>
+						<button class="dropdown-trigger button is-text is-radiusless" aria-label="Your Account" aria-haspopup="true" aria-controls="user-menu" aria-expanded="false">
+							<span class="image icon is-hidden-mobile" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+							<span class="is-size-7 is-truncated is-hidden-mobile" data-profile-property="userName"></span>
+							<span class="image icon is-hidden-tablet has-margin-none" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+						</button>
+						<div class="dropdown-menu box" id="user-menu" role="menu">
+							<div class="media is-user-dir">
+								<div class="media-left">
+									<span class="image is-64x64" aria-hidden="true">
+										<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+									</span>
+								</div>
+								<div class="media-content">
+									<p class="title has-margin-top-small">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="userName"></span>
+									</p>
+									<p class="subtitle">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="upn"></span>
+									</p>
+								</div>
+							</div>
+							<ul class="is-unstyled has-margin-none">
+								<li><a href="/profile" data-profile-property="profileUrl">Profile</a></li>
+								<li><a class="docs-sign-out" href="#">Sign out</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="contents-button" aria-label="Contents" data-bi-name="contents-expand-">
+				<span class="docon docon-editor-list-bullet"></span><span>Contents</span>
+			</button>
+		</div>
+	</div>
+	<div id="disclaimer-holder" class="disclaimer-holder"></div>
+	</div>
+
+	<div class="mainContainer uhf-container  has-top-padding " data-bi-name="body">
+		
+		<div class="columns ">
+
+			<section class="primary-holder column ">
+				<div class="columns ">
+
+
+
+				<div id="main-column" class="column ">
+					
+					<main id="main" role="main" class="content" data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="get-started-with-windows-10-apps" sourcefile="get-started/index.md" sourcestartlinenumber="15">Get started with Windows 10 apps</h1>
+
+
+
+
+						<!-- <content> -->
+							
+<p>Build apps that work on all Windows 10 devices, or enhance your existing apps with new and updated features.<br>
+<br></p>
+<ul id="cardtypes-K" class="cardsK panelContent">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="/en-us/media/illustrations/biztalk-developer-documentation-1.svg" alt="Overview illustration" data-linktype="absolute-path" class="x-hidden-focus">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Learn about Windows 10 Apps</h3>
+                        <p>Windows 10 and the Universal Windows Platform let you build apps that work and look great across all Windows device types, or update existing apps with modern features.</p>
+                        <ul>
+                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide" data-linktype="external">What's a UWP app?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="/en-us/media/illustrations/biztalk-host-integration-install-configure.svg" alt="Setup illustration" data-linktype="absolute-path" class="x-hidden-focus">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                    <h3>Get set up</h3>
+                    <p>Visual Studio Community and the Windows 10 SDK give you everything you need to build great apps – and they’re free!</p>
+                    <ul>
+                        <li><a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up" data-linktype="external">Download the tools and SDK</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage bgdAccent1">
+                            <img src="/en-us/media/illustrations/team-services-dev-ops-test.svg" alt="Code illustration" data-linktype="absolute-path" class="x-hidden-focus">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Start coding</h3>
+                        <p>Whether you’re an experienced dev or just building your first app, get hands-on experience with the Windows 10 platform and docs.</p>
+                        <ul>
+                            <li><a href="//docs.microsoft.com/windows/uwp/get-started/create-uwp-apps" data-linktype="external">Start coding</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<ul class="panelContent cardsF">
+  <li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="/en-us/media/common/i_tasks.svg" alt="Tutorials icon" data-linktype="absolute-path">
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>Tutorials</h3>
+                    <p>Looking for a guided learning experience? These tutorials will help.</p>
+                    <br>
+                    <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui" data-linktype="external">UI Basics</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/data-binding/xaml-basics-data-binding" data-linktype="external">Data binding</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/design/basics/xaml-basics-style" data-linktype="external">Custom styles</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+  <li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="/en-us/media/common/i_code-samples.svg" alt="Samples icon" data-linktype="absolute-path">
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>Samples</h3>
+                    <p>Get firsthand experience with the Windows 10 platform and see APIs in action.</p>
+                    <br>
+                    <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples" data-linktype="external">Using UWP app samples</a></p>
+                    <p><a href="//github.com/Microsoft/Windows-appsample-customers-orders-database" data-linktype="external">Customer Orders Database</a></p>
+                    <p><a href="//github.com/Microsoft/Windows-appsample-remote-system-sessions" data-linktype="external">Quiz Game (Project Rome)</a></p>
+                    <p><a href="//developer.microsoft.com/windows/samples" data-linktype="external">Windows code samples portal</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+  <li>
+    <div class="cardSize">
+        <div class="cardPadding">
+            <div class="card">
+                <div class="cardImageOuter">
+                    <div class="cardImage">
+                        <img src="/en-us/media/common/i_whats-new.svg" alt="Whats New icon" data-linktype="absolute-path">
+                    </div>
+                </div>
+                <div class="cardText">
+                    <h3>What's new</h3>
+                    <p>Expand your horizons and explore the latest additions to Windows 10.</p>
+                    <br>
+                    <p><a href="//developer.microsoft.com/windows/windows-10-for-developers" data-linktype="external">What's cool in the latest version of Windows 10</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest" data-linktype="external">What's new in Windows 10 for developers</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>
+</ul>
+<div class="container">
+    <ul class="cardsY panelContent featuredContent">
+       <li>
+            <a href="//developer.microsoft.com/windows/apps/design" data-linktype="external">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/common/i_digital-art.svg" src="/en-us/media/common/i_digital-art.svg" alt="Icon of tablet and pen" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Design and UI</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="//docs.microsoft.com/uwp/" data-linktype="external">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/common/i_api.svg" src="/en-us/media/common/i_api-reference.svg" alt="Reference icon" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>API Reference</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="//developer.microsoft.com/windows/bridges" data-linktype="external">
+                <div class="cardSize">
+                    <div class="cardPadding">
+                        <div class="card">
+                            <div class="cardImageOuter">
+                                <div class="cardImage">
+                                    <img data-hoverimage="/media/hubs/windows/win_try-windows.svg" src="/en-us/media/hubs/windows/win_try-windows.png" alt="Windows icon" data-linktype="absolute-path">
+                                </div>
+                            </div>
+                            <div class="cardText">
+                                <h3>Bring your app to Windows</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<hr>
+<ul class="panelContent cardsW">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Developer tools</h3>
+                        <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/" data-linktype="external">Windows Community Toolkit</a></p>
+                        <p><a href="//developer.microsoft.com/windows/downloads/virtual-machines" data-linktype="external">Virtual machines</a></p>
+                        <p><a href="//docs.microsoft.com/windows/wsl/about" data-linktype="external">Bash on Ubuntu on Windows</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>New to development?</h3>
+                        <p><a href="//mva.microsoft.com/training-topics/c-app-development" data-linktype="external">Microsoft Virtual Academy</a></p>
+                        <p><a href="//www.linkedin.com/learning/learning-universal-windows-app-development/welcome" data-linktype="external">LinkedIn Learning</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <h3>Explore related docs</h3>
+                        <p><a href="//docs.microsoft.com/dotnet/csharp/index" data-linktype="external">C# Guide</a></p>
+                        <p><a href="//docs.microsoft.com/visualstudio/ide/" data-linktype="external">Visual Studio</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+						<!-- </content> -->
+							
+						</main>
+
+						<!-- feedback section -->
+
+
+				
+						<!-- end feedback section -->
+
+						<div class="footerContainer is-visible-interactive ">
+<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>						</div>
+					</div>
+
+					<!--end of div.columns -->
+
+				</div>
+			
+			<!--end of .primary-holder -->
+			</section>
+
+				<div id="left-container" class="left-container column is-one-third-tablet is-one-quarter-desktop">
+					<nav class="sidebar" id="sidebar" data-bi-name="left toc" role="navigation" aria-label="Main Navigation">
+						<button class="sidebar-header" type="button" aria-label="Close" data-bi-name="contents-collapse">
+							<span>Contents</span>
+							<span class="docon docon-navigate-close" aria-hidden="true"></span>
+						</button>
+						<div id="sidebarContent">
+							<div class="filterHolder">
+							</div>
+							<nav class="toc"></nav>
+							<div class="pdfDownloadHolder"></div>
+						</div>
+					</nav>
+				</div>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer is-hidden-interactive ">
+<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>	</div>
+
+	<div class="action-panel"></div>
+</body>
+</html>

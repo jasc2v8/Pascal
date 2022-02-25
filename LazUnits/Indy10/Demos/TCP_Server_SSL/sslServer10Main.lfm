@@ -1,0 +1,94 @@
+object Form1: TForm1
+  Left = 501
+  Height = 430
+  Top = 87
+  Width = 482
+  ActiveControl = Memo1
+  Caption = 'Simple SSL Server (Indy 10)'
+  ClientHeight = 430
+  ClientWidth = 482
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Arial'
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object Panel1: TPanel
+    Left = 0
+    Height = 41
+    Top = 0
+    Width = 482
+    Align = alTop
+    ClientHeight = 41
+    ClientWidth = 482
+    TabOrder = 0
+    object btnExit: TSpeedButton
+      Left = 434
+      Height = 22
+      Top = 6
+      Width = 41
+      Anchors = [akTop, akRight]
+      Caption = 'E&xit'
+      Font.Color = clBlue
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      OnClick = btnExitClick
+      ParentFont = False
+    end
+    object ledListening: TShape
+      Left = 78
+      Height = 8
+      Top = 13
+      Width = 20
+      Brush.Color = clRed
+    end
+    object Label1: TLabel
+      Left = 13
+      Height = 15
+      Top = 9
+      Width = 54
+      Caption = 'Listening:'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 138
+      Height = 15
+      Top = 9
+      Width = 73
+      Caption = 'Connections:'
+      ParentColor = False
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 389
+    Top = 41
+    Width = 482
+    Align = alClient
+    BevelInner = bvLowered
+    BorderWidth = 5
+    ClientHeight = 389
+    ClientWidth = 482
+    TabOrder = 1
+    object Memo1: TMemo
+      Left = 7
+      Height = 375
+      Top = 7
+      Width = 468
+      Align = alClient
+      BorderStyle = bsNone
+      ReadOnly = True
+      TabOrder = 0
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    left = 311
+    top = 87
+  end
+end

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="no-js hasSidebar hasPageActions hasBreadcrumb conceptual" lang="en-us" dir="ltr" data-authenticated="false" data-target="docs">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Choose Your Technology" />
+	<meta property="og:image" content="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/microsoft-header.png" />
+
+
+		<meta name="breadcrumb_path" content="/windows/desktop/breadcrumb/toc.json" />
+<meta name="ms.prod" content="desktop" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinDesktop" />
+<meta name="ms.assetid" content="82705644-F1F0-40F3-99B1-7A97BFB32831" />
+<meta name="ms.author" content="windowssdkdev" />
+<meta name="ms.topic" content="article" />
+<meta name="Description" content="When you want to create a new desktop app, the first decision you make is whether to use the Win32 and COM API or .NET." />
+<meta name="ms.date" content="05/31/2018" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="search.ms_docsetname" content="desktop" />
+<meta name="locale" content="en-us" />
+<meta name="site_name" content="Docs" />
+<meta name="search.ms_product" content="MSDN" />
+<meta name="depot_name" content="MSDN.desktop" />
+<meta name="author" content="Michael Satran" />
+<meta name="updated_at" content="2018-10-24 07:05 PM" />
+<meta name="gitcommit" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/win32/commit/472b2e07d4cdbe5f9c86811b104935259625c314?path=%2fdesktop-src%2fchoose-your-technology.md&amp;_a=contents" />
+<meta name="original_content_git_url" content="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/win32?path=%2fdesktop-src%2fchoose-your-technology.md&amp;version=GBlive&amp;_a=contents" />
+<meta name="document_id" content="891f61de-a776-e55a-5c79-b676b4b58ecc" />
+<meta name="document_version_independent_id" content="39ce3487-bbe1-4ba2-f729-9513b7b3b2de" />
+<meta name="page_type" content="conceptual" />
+<meta name="toc_rel" content="TOC.json" />
+<meta name="word_count" content="1698" />
+
+	<meta name="scope" content="Windows, Desktop" />
+<link href="https://docs.microsoft.com/en-us/windows/desktop/choose-your-technology" rel="canonical">
+	<title>Choose Your Technology | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/css/b3687bf5.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/css/e562b38f.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data:{
+			azureHeaderLocale: 'en-us',
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasComments: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/win32?path=%2fdesktop-src%2fchoose-your-technology.md&version=GBlive&_a=contents',
+			forceVersionPicker:false		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true,
+			enableUHFPPE: false
+		}
+	};
+	if (!('Promise' in window && 'resolve' in window.Promise && 'reject' in window.Promise && 'all' in window.Promise && 'race' in window.Promise)) {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/6ee34c01.bluebird.min.js"><\/script>');
+	}
+	if (typeof fetch !== 'function') {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/d9fc435c.fetch.min.js"><\/script>');
+	}
+	</script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/js/de980046.localized-strings.js"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/js/79987ada.global.min.js"></script>
+
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder">
+		<div id="headerAreaHolder" data-bi-name="header">
+			<div id="uhf-placeholder"></div>
+		</div>
+	<div class="content-header uhf-container has-padding" data-bi-name="content-header">
+		<nav class="has-padding-none-mobile" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+		<ul class="breadcrumbs">
+		</ul>
+		</nav>
+		<div class="content-header-controls exit-focus">
+			<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse">
+				<span class="icon"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit focus mode</span>
+			</button>
+			
+		</div>
+		<div class="content-header-controls">
+			<button type="button" class="contents-button button" data-bi-name="contents-expand">
+				<span class="icon"><span class="docon docon-menu"></span></span>
+				<span>Contents</span>
+			</button>
+		</div>
+		<div class="action-bar">
+			<ul class="action-list">
+							<li id="contenteditbtn" hidden>
+									<a href="https://cpubwin.visualstudio.com/DefaultCollection/win32/_git/win32?path=%2fdesktop-src%2fchoose-your-technology.md&version=GBlive&_a=contents"  class="button is-text is-icon-only-touch is-size-7" title="Edit This Document" data-bi-name="edit">
+									<span class="icon"> 
+										<span class="docon docon-edit-outline" aria-hidden="true"></span>
+									</span>
+									<span class="action-item-text">Edit</span>
+								</a>
+							</li>
+				<li>
+					<div class="sharing dropdown has-caret" auto-align>
+						<a href="#" class="dropdown-trigger button is-text is-size-7 is-icon-only-touch" aria-haspopup="true" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+							<span class="icon">
+								<span class="docon docon-sharing" aria-hidden="true"></span>
+							</span>
+							<span class="action-item-text">Share</span>
+						</a>
+						<div class="dropdown-menu" id="sharing-menu" role="menu">
+							<ul data-bi-name="share-links">
+								<li><a class="share-twitter" data-bi-name="twitter">
+									<span class="icon">
+										<span class="docon docon-brand-twitter" aria-hidden="true"></span>
+									</span>
+									<span>Twitter</span></a></li>
+								<li><a class="share-linkedin" data-bi-name="linkedin">
+									<span class="icon">
+										<span class="docon docon-brand-linkedin" aria-hidden="true"></span>
+									</span>
+									<span>LinkedIn</span></a></li>
+								<li><a class="share-facebook" data-bi-name="facebook">
+									<span class="icon">
+										<span class="docon docon-brand-facebook" aria-hidden="true"></span>
+									</span>
+									<span>Facebook</span></a></li>
+								<li><a class="share-email" data-bi-name="email">
+									<span class="icon">
+										<span class="docon docon-mail-message-fill" aria-hidden="true"></span>
+									</span>
+									<span>Email</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<button class="toggle-theme button is-text is-size-7 is-icon-only-touch" aria-label="toggle-theme" data-bi-name="select-theme">
+						<span class="icon">
+							<span class="docon docon-sun"></span>
+						</span>
+						<span class="action-item-text">Theme</span>
+					</button>
+				</li>
+				<li class="is-unstyled-action-list-item">
+					<a class="docs-sign-in not-authenticated button is-text has-text-primary is-size-7" href="#">Sign in</a>
+					<div class="dropdown has-caret authenticated" auto-align>
+						<button class="dropdown-trigger button is-text is-radiusless" aria-label="Your Account" aria-haspopup="true" aria-controls="user-menu" aria-expanded="false">
+							<span class="image icon is-hidden-mobile" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+							<span class="is-size-7 is-truncated is-hidden-mobile" data-profile-property="userName"></span>
+							<span class="image icon is-hidden-tablet has-margin-none" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+						</button>
+						<div class="dropdown-menu box" id="user-menu" role="menu">
+							<div class="media is-user-dir">
+								<div class="media-left">
+									<span class="image is-64x64" aria-hidden="true">
+										<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+									</span>
+								</div>
+								<div class="media-content">
+									<p class="title has-margin-top-small">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="userName"></span>
+									</p>
+									<p class="subtitle">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="upn"></span>
+									</p>
+								</div>
+							</div>
+							<ul class="is-unstyled has-margin-none">
+								<li><a href="/profile" data-profile-property="profileUrl">Profile</a></li>
+								<li><a class="docs-sign-out" href="#">Sign out</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="contents-button" aria-label="Contents" data-bi-name="contents-expand-">
+				<span class="docon docon-editor-list-bullet"></span><span>Contents</span>
+			</button>
+		</div>
+	</div>
+	<div id="disclaimer-holder" class="disclaimer-holder"></div>
+	</div>
+
+	<div class="mainContainer uhf-container  has-top-padding " data-bi-name="body">
+		
+		<div class="columns ">
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns ">
+
+					<div id="page-actions" class="right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+							<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation">
+								<h3>In this article</h3>
+							</nav>
+					</div>
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+					
+					<main id="main" role="main" class="content" data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="choose-your-technology" sourcefile="choose-your-technology.md" sourcestartlinenumber="10">Choose Your Technology</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li class="displayDate loading">
+								<span aria-hidden="true" class="docon docon-calendar"></span>
+								<time role="presentation" datetime="2018-05-31T00:00:00.000Z" data-article-date-source="ms.date">05/31/2018</time>
+							</li>
+								<li class="readingTime">
+									<span aria-hidden="true" class="docon docon-clock"></span>
+									8 minutes to read
+								</li>
+
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation">
+							<h3>In this article</h3>
+						</nav>
+
+
+
+						<!-- <content> -->
+							
+<p>When you want to create a new desktop app, the first decision you make is whether to use the Universal Windows Platform (UWP), .NET (Windows Forms and WPF), or the Windows API (Win32). All of these options let you create desktop apps like Word, Excel, and Photoshop that run in the classic Windows desktop and take full advantage of that environment's specific features.</p>
+<p>Here are a few of the major differences between these technologies and when they are appropriate to use:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UWP</strong></td>
+<td>Languages: C#, C++, VB, JavaScript<br><br>Best if you are targeting Windows 10 and you want unencumbered access to the latest Windows 10 APIs and features. UWP also provides many other benefits of a modern application platform. These include a XAML-based UI model with built-in support for adapting to DPI and screen size changes, a security model in which users explicitly grants apps access to device capabilities, and a clean packaging model that supports clean installations and the ability to publish directly to the Microsoft Store.  <br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><strong>.NET (Windows Forms and WPF)</strong></td>
+<td>Languages: C#, C++, F#, VB<br><br>Best if you need to target OS versions before Windows 10 and you want to have a higher level of coding productivity than C++ and Win32. You can also share some .NET Framework code and libraries with other Microsoft platforms by using portable class libraries.<br></td>
+<td><br></td>
+</tr>
+<tr>
+<td><strong>C++ and Win32</strong></td>
+<td>Languages: C++ with COM<br><br>Best if you need to achieve the highest levels of performance or efficiency, access native OS features, or want to target DirectX technologies. C++ and Win32 gets you &quot;closer to the metal,&quot; and lets you achieve the best performance for your app by taking direct control over memory allocation and performance-oriented CPU features like SSE or AVX instructions. It is the best way to target DirectX technologies for low-level, high-performance graphics access. You can share C++ code between all types of Windows applications as well as with non-Windows platforms. <br></td>
+<td><br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="choose-uwp">Choose UWP</h2>
+<p>Windows 10 introduced the Universal Windows Platform (UWP), which provides a common app platform for PCs and every other device that runs Windows 10. A UWP app is:</p>
+<ul>
+<li>Engaging: UWP apps use modern features such as controls that support the Fluent Design System, live tiles, push notifications, and user activities to engage users.</li>
+<li>Secure: UWP apps declare which device resources and data they access. Users must authorize the access.</li>
+<li>Able to use a common API on PCs and all other devices that run Windows 10.</li>
+<li>Able to use device specific capabilities and adapt the UI to different device screen sizes, resolutions, and DPI.</li>
+<li>Available from the Microsoft Store on PCs that run Windows 10.</li>
+<li>Able to be installed and uninstalled without risk to the machine or incurring &quot;machine rot&quot;.</li>
+<li>Programmable in C#, C++, Visual Basic, and Javascript. For UI, use XAML, HTML, or DirectX.</li>
+</ul>
+<p>For more information, see <a href="https://docs.microsoft.com/windows/uwp/get-started/" data-linktype="external">Get started with Windows 10 apps</a>.</p>
+<h2 id="choose-net">Choose .NET</h2>
+<p>.NET provides a consistent, first-class development experience for the desktop, and it offers a higher level of coding productivity than C++ and Win32. .NET allows you to keep developing foundational apps on the desktop and add exciting new experiences, all while using your existing skills and reusing code between devices. If you are looking to create more tailored, platform-appropriate experiences on any device, Visual Studio Industry Partners (VSIP) provide solutions that enable re-using C# skills and code with non-Windows devices.</p>
+<p>In addition to features you expect such as files/streams and network communication, here are a few highlights of what .NET offers to make building applications very productive:</p>
+<ul>
+<li>Runtime productivity and safety such as automatic memory management, type safety, exception handling, and thread management.</li>
+<li>Two UI stacks: WPF and Windows Forms (see below).</li>
+<li>Rich collection data types.</li>
+<li>Data modeling (ADO, LINQ, WCF data services).</li>
+<li>Language Integrated Query (LINQ).</li>
+<li>Date and time library.</li>
+<li>Serialization.</li>
+<li>Web services.</li>
+<li>Security and cryptography.</li>
+<li>Parallel programming library.</li>
+</ul>
+<p><strong>Choose a UI stack:</strong> Desktop applications can choose between two UI stacks. Data-centric applications benefit from data binding features in both for displaying data. The following provides guidance on choosing between the two UI stacks:</p>
+<ul>
+<li><strong>WPF:</strong> This is the preferred technology for Windows-based desktop applications that require UI complexity, styles customization, and graphics-intensive scenarios for the desktop. WPF also takes advantage of XAML views and simplified asynchronous capabilities (async/await). WPF development skills are similar to UWP development skills, so migration from WPF to UWP apps is easier than migration from Windows Forms.</li>
+<li><strong>Windows Forms:</strong> This was the first UI technology in the .NET Framework for building desktop applications. It is still a good fit for many business desktop applications. Windows Forms is easier to use and lighter weight than WPF for simple scenarios. Windows Forms does not use XAML, so deciding later to extend your application to UWP entails a complete re-write of your UI.</li>
+</ul>
+<p><strong>Other capabilities</strong> .NET provides multiple innovations to you to extend your app to new platforms without changes in the architecture. You can often re-use code, and the following .NET features make that easier:</p>
+<ul>
+<li><strong>Model-View-ViewModel design pattern (MVVM):</strong> Microsoft client platforms (including WPF) make it easy to build applications using the MVVM pattern. With this pattern you get a strong separation of display from application state, logic, and behaviors, which will help you to create clean and maintainable code that can be easily shared between multiple devices.</li>
+<li><strong>Portable class libraries:</strong> .NET portable libraries allow binaries to be shared between multiple platforms. Implementing your client logic with .NET portable libraries will greatly simplify the creation of multiple experiences on multiple platforms.</li>
+<li><strong>Modernize your user experience:</strong> Concepts that are demanded by today s users can be implemented with the latest innovations on .NET for the desktop. Design principles such as  fast and fluid,   authentically digital,  or  do more with less  can be applied to your existing desktop application by employing a modern UI for your XAML design, carefully using animations, and implementing .NET asynchronous programming extensively.</li>
+</ul>
+<p>For further reading and more depth, there is a description of .NET technologies and guidance for various applications in <a href="http://download.microsoft.com/download/1/6/E/16E9FC39-0D61-4DB8-AADE-9F6950B8BF49/Microsoft_Press_eBook_NET_Technology_Guide_for_Business_Applications.pdf" data-linktype="external">.NET Technology Guide for Business Applications</a> for which there is a summary.</p>
+<h2 id="choosing-c-and-win32">Choosing C++ and Win32</h2>
+<p>C++ provides a first-class development experience across a wide range of platforms, both Windows and non-Windows, without depending on a high-level runtime environment like .NET. This makes C++ the language of choice for portable applications when such runtimes are unavailable or too heavyweight for certain target platforms.</p>
+<p>Using C++ and the Win32 API makes it possible to achieve the highest levels of performance and efficiency by taking tighter control of the target platform than the .NET runtime allows. However, exercising such a level of control over your application's execution requires greater care and attention to get right, and trades development productivity for runtime performance.</p>
+<p>Here are a few highlights of what C++ offers to enable you to build high-performance applications.</p>
+<ul>
+<li>Hardware-level optimizations, including tight control over resource allocation, object lifetimes, data layout, alignment, byte packing, and more.</li>
+<li>Access to performance-oriented instruction sets like SSE and AVX through intrinsic functions.</li>
+<li>Efficient, type-safe generic programming by using templates.</li>
+<li>Efficient and safe containers and algorithms.</li>
+<li>DirectX, in particular Direct3D and DirectCompute.</li>
+<li>C++ AMP.</li>
+</ul>
+<h3 id="c-for-games-and-graphics-rich-applications">C++ for games and graphics-rich applications</h3>
+<p>If there's one domain where C++ is the clear winner, games is it -- or apps that demand similar levels of graphics and processing performance. C++ is ideally suited to these kinds of apps because it enables the programmer to manage resources and object lifetimes explicitly; it provides access to hardware-level optimization opportunities; it can access DirectX and other performance-oriented Win32 libraries more directly than a managed language; and it makes available a number of quality game development libraries.</p>
+<p>Even while there are great technologies available for making games that are less performance intensive in managed languages like C#, the managed environment makes it difficult or impossible to match the level of performance that can be achieved by C++ developers. When absolute performance is the goal or when any overhead is too much--as when bringing big experiences to small devices--C++ is the go-to language.</p>
+<h3 id="c-for-traditional-desktop-applications">C++ for traditional desktop applications</h3>
+<p>Writing a traditional, UI-heavy desktop application like a spreadsheet, word processor, or line-of-business application in C++ makes the most sense when the application is computationally intensive, or when there is a substantial amount of existing C++ code that you can use to build it. Otherwise, managed languages have adequate performance and the .NET ecosystem offers increased productivity due to its more-modern application and UI frameworks, and its more-capable standard library.</p>
+<p>When writing a desktop application in C++, you can choose MFC or Win32 for the UI, or a host of third-party application frameworks that also support non-Windows platforms.</p>
+<ul>
+<li><strong>MFC (Microsoft Foundation Class Library):</strong> This is the venerable application framework and UI library that has served Windows developers since 1992. It's a thin C++ wrapper over the handle-based, C-language Win32 API and provides object-oriented interfaces for many of the predefined windows, common controls, and other Windows objects. Although many modern UI frameworks in the .NET ecosystem surpass MFC in convenience, it is still the native UI framework of choice for many C++ developers creating applications for the Windows desktop.</li>
+<li><strong>Win32:</strong> This is the handle-based, C-language API of the Windows platform, including but not limited to UI functionality such as windowing, drawing, and UI controls. Because it is a low-level, C-language API based on handles, it's an infrequent choice for creating modern, UI-intensive apps. However, it supplies the basic APIs necessary to interact with the Windows platform, and is a suitable choice for apps that have simple UI requirements or that just want the Windows UI to stay out of the way as much as possible for example, games.</li>
+<li><strong>Third-party application frameworks:</strong> Because C++ can run on a wide variety of platforms and isn't tied to Windows or the .NET runtime, third-parties have developed new application and UI frameworks for C++ to ease development of cross-platform applications with rich user interfaces. Some of these frameworks provide their own look &amp; feel, while others such as wxWidgets or Qt use or emulate the native control set of the platform. Using these libraries, it's possible to share nearly all of an application's source code between versions of the application that run on Windows or other platforms, such as OSX or Linux.</li>
+</ul>
+
+						<!-- </content> -->
+							
+						</main>
+
+						<!-- feedback section -->
+
+
+				
+						<!-- end feedback section -->
+
+						<div class="footerContainer is-visible-interactive ">
+<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>						</div>
+					</div>
+
+					<!--end of div.columns -->
+
+				</div>
+			
+			<!--end of .primary-holder -->
+			</section>
+
+				<div id="left-container" class="left-container column is-one-third-tablet is-one-quarter-desktop">
+					<nav class="sidebar" id="sidebar" data-bi-name="left toc" role="navigation" aria-label="Main Navigation">
+						<button class="sidebar-header" type="button" aria-label="Close" data-bi-name="contents-collapse">
+							<span>Contents</span>
+							<span class="docon docon-navigate-close" aria-hidden="true"></span>
+						</button>
+						<div id="sidebarContent">
+							<div class="filterHolder">
+							</div>
+							<nav class="toc"></nav>
+							<div class="pdfDownloadHolder"></div>
+						</div>
+					</nav>
+				</div>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer is-hidden-interactive ">
+<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>	</div>
+
+	<div class="action-panel"></div>
+</body>
+</html>

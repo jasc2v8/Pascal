@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="CodeLibrarian"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <MajorVersionNr Value="1"/>
+      <RevisionNr Value="1"/>
+      <BuildNr Value="3"/>
+      <Attributes pvaPreRelease="True"/>
+      <StringTable Comments="Your very own code library." CompanyName="EVOSI" FileDescription="Snippets" InternalName="Code Librarian" LegalCopyright="Copyright 2013 Evosi, all rights reserved." OriginalFilename="snippets.exe" ProductName="Code Snippets" ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="2">
+      <Item1 Name="Release" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="bin\$(TargetCPU)-$(TargetOS)\CodeLibrarian"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="..\Components;HighLighters"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dDebug"/>
+          </Other>
+        </CompilerOptions>
+      </Item2>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="3">
+      <Item1>
+        <PackageName Value="LazControls"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="SynEdit"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+    </RequiredPackages>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="CodeLibrarian.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="umainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SnippetsMainFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMainForm"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\Components\GpLists.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\Components\GpStructuredStorage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GpStructuredStorage"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="uoptions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="EvsOptionsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="uvar.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="HighLighters\uevssynhighlightersql.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="HighLighters\StrConst.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit7>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="bin\CodeLibrarian"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..\Components;HighLighters"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <Optimizations>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CustomOptions Value="-dRelease"/>
+      <ExecuteAfter>
+        <Command Value="$Path($TargetFile())\cp.bat"/>
+        <CompileReasons Run="False"/>
+      </ExecuteAfter>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

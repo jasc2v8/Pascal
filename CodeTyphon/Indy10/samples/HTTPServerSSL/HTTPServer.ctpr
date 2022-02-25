@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="HTTPServer"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <BuildModes Count="3">
+      <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="../xbin"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <ExecuteBefore>
+              <Command Value="copy_demo_files.cmd"/>
+            </ExecuteBefore>
+          </Other>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="../xbin"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <ExecuteBefore>
+              <Command Value="copy_demo_files.cmd"/>
+            </ExecuteBefore>
+          </Other>
+        </CompilerOptions>
+      </Item3>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="pl_indy"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="adLCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="HTTPServer.ppr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="FormMain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="MyServer.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="../xbin"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <ExecuteBefore>
+        <Command Value="copy_demo_files.cmd"/>
+      </ExecuteBefore>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

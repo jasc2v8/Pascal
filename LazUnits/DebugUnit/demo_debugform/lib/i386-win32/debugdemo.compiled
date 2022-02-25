@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\184\fpc\3.0.4\bin\i386-win32\fpc.exe" Date="1286835357"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -l -vewnhibq -FiD:\Software\DEV\Work\pascal\LazUnits\DebugUnit\demo_debugform\lib\i386-win32 -FuC:\lazarus\184\lcl\units\i386-win32\win32 -FuC:\lazarus\184\lcl\units\i386-win32 -FuC:\lazarus\184\components\lazutils\lib\i386-win32 -FuC:\lazarus\184\packager\units\i386-win32 -FuD:\Software\DEV\Work\pascal\LazUnits\DebugUnit\demo_debugform\ -FUD:\Software\DEV\Work\pascal\LazUnits\DebugUnit\demo_debugform\lib\i386-win32\ -dLCL -dLCLwin32 debugdemo.lpr"/>
+</CONFIG>

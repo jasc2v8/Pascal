@@ -1,0 +1,43 @@
+The active window (the result of GetActiveWindow()) is the window attached to the calling thread that gets input.
+
+The foreground window (the result of of GetForegroundWindow()) is the window that's currently getting input regardless of its relationship to the calling thread.
+
+The active window is essentially localized to your application; the foreground window is global to the system.
+
+For example, if a window belonging to another process is the foreground, calling GetActiveWindow() from within your own process will return NULL.
+
+I believe that it's true that being the foreground window implies being the active window, but the converse is not true. Also note that in modern Windows, applications generally cannot use SetForegroundWindow() to steal focus from another process (unless that process has explicitly given permission via AllowSetForegroundWindow).
+
+active window
+The window that appears in the foreground with a highlighted title bar or
+border to distinguish it from other visible windows.
+
+foreground window
+The window with which the user is currently working. The system assigns a
+slightly higher priority to the thread used to create the foreground window
+than it does to other threads.
+
+focus window
+The window that is currently receiving keyboard input. The focus window is
+always the active window, a descendent of the active window, or NULL.
+
+top-level window
+A window that has no parent window.
+
+'the selected window' is in my experience used for either the foreground
+window or the window with focus.
+
+Then, again from the online help (but now the API specs):
+
+SetActiveWindow
+This function makes the specified top-level window associated with the
+thread calling this function the active window.
+
+...and here you should read the remarks for the difference between this call
+and SetForegroundWindow.
+
+SetFocus is a bit different - as you saw above, this is the window that gets
+the keyboard input. This is almost always a child of the active window (a
+button, editbox etc.) as opposed to the active window itself.
+
+Johan Rosengren

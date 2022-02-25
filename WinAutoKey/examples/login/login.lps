@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Release"/>
+    <Units Count="5">
+      <Unit0>
+        <Filename Value="login.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="5"/>
+        <UsageCount Value="48"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="100"/>
+        <CursorPos X="3" Y="125"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="jddebug.pas"/>
+        <ComponentName Value="DebugForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="jdDebug"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="8"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="winautokey.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="407"/>
+        <CursorPos Y="404"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus\184\fpc\3.0.4\source\packages\winunits-jedi\src\jwawinuser.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4854"/>
+        <CursorPos X="10" Y="4867"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+    </Units>
+    <JumpHistory Count="28" HistoryIndex="27">
+      <Position1>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="523" Column="33" TopLine="501"/>
+      </Position1>
+      <Position2>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="711" Column="18" TopLine="689"/>
+      </Position2>
+      <Position3>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="760" Column="33" TopLine="738"/>
+      </Position3>
+      <Position4>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="910" TopLine="778"/>
+      </Position4>
+      <Position5>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="710" Column="3" TopLine="703"/>
+      </Position5>
+      <Position6>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="714" Column="37" TopLine="699"/>
+      </Position6>
+      <Position7>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="712" Column="25" TopLine="699"/>
+      </Position7>
+      <Position8>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="714" Column="44" TopLine="701"/>
+      </Position8>
+      <Position9>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="715" Column="13" TopLine="701"/>
+      </Position9>
+      <Position10>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="714" Column="3" TopLine="701"/>
+      </Position10>
+      <Position11>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="709" TopLine="702"/>
+      </Position11>
+      <Position12>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="77" Column="58" TopLine="58"/>
+      </Position12>
+      <Position13>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="71" Column="14" TopLine="62"/>
+      </Position13>
+      <Position14>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="516" Column="16" TopLine="513"/>
+      </Position14>
+      <Position15>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="719" TopLine="707"/>
+      </Position15>
+      <Position16>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="516" Column="16" TopLine="495"/>
+      </Position16>
+      <Position17>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="99" Column="5" TopLine="74"/>
+      </Position17>
+      <Position18>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="716" Column="15" TopLine="711"/>
+      </Position18>
+      <Position19>
+        <Filename Value="winautokey.pas"/>
+      </Position19>
+      <Position20>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="697" Column="21" TopLine="678"/>
+      </Position20>
+      <Position21>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="515" Column="13" TopLine="502"/>
+      </Position21>
+      <Position22>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="688" TopLine="679"/>
+      </Position22>
+      <Position23>
+        <Filename Value="winautokey.pas"/>
+      </Position23>
+      <Position24>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="689" Column="10" TopLine="676"/>
+      </Position24>
+      <Position25>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="515" TopLine="503"/>
+      </Position25>
+      <Position26>
+        <Filename Value="winautokey.pas"/>
+      </Position26>
+      <Position27>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="50" Column="31" TopLine="48"/>
+      </Position27>
+      <Position28>
+        <Filename Value="winautokey.pas"/>
+        <Caret Line="1274" TopLine="1257"/>
+      </Position28>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

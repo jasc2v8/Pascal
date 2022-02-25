@@ -1,0 +1,248 @@
+object MainForm: TMainForm
+  Left = 351
+  Height = 576
+  Top = 250
+  Width = 824
+  ActiveControl = PageControl
+  Caption = 'Lazarus Copy Options'
+  ClientHeight = 576
+  ClientWidth = 824
+  OnShow = FormShow
+  Position = poScreenCenter
+  Visible = False
+  object PageControl: TPageControl
+    Left = 8
+    Height = 560
+    Top = 8
+    Width = 800
+    ActivePage = TabIDEOptions
+    TabIndex = 1
+    TabOrder = 0
+    object HelpSheet: TTabSheet
+      Caption = 'Help'
+      ClientHeight = 532
+      ClientWidth = 792
+      object HelpMemo: TMemo
+        Left = 8
+        Height = 512
+        Top = 16
+        Width = 768
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        Lines.Strings = (
+          ''
+          'Free Pascal / Lazarus IDE Copy Options'
+          '=========================================================================================='
+          ''
+          'Overview'
+          '------------------------------------------------------------------------------------------'
+          'LazCopyOptions saves time by not having to manually reset all the desired options.'
+          ''
+          'Use LazCopyOptions to:'
+          '  1. Copy Options to Other IDE Installations'
+          '  2. Copy Options to Other Projects'
+          '  3. Backup and Restore IDE and Project Options'
+          ''
+          'Copy Options to Other IDE Installations'
+          '------------------------------------------------------------------------------------------'
+          'Lazarus IDE options are stored in several XML files.'
+          'Options that require a build of the IDE cannot be safely copied.'
+          'Options that don''t require a build can be copied, including:'
+          ''
+          #9'($PrimaryConfigPath)\editoroptions.xml'
+          #9#9'Font size, background color, right margin, etc.'
+          #9
+          #9'($PrimaryConfigPath)\environmentoptions.xml'
+          #9#9'Environment options, IDE CoolBar, etc.'
+          #9#9'The FPC and Lazarus paths must be updated after copying this file.'
+          #9#9#9#9#9#9#9#9#9#9#9#9
+          #9'($PrimaryConfigPath)\projectoptions.xml'
+          #9#9'Used when creating a new project.'
+          #9#9'Add build modes and compiler options to this file.'
+          #9#9'Created by Project Options, "Set compiler options as default"'
+          #9
+          'Copy Options to Other Projects'
+          '------------------------------------------------------------------------------------------'
+          #9'($ProjPath)\project.lpi'
+          #9#9'Project options are stored in this file (build modes and compiler options)'
+          ''
+          'Backup and Restore IDE and Project Options'
+          '------------------------------------------------------------------------------------------'
+          #9'Backup ($PrimaryConfigPath)\*.xml     to \backup\*.xml'
+          #9'Backup ($ProjPath)\projectoptions.xml to \backup\myprojectoptions.xml'
+          ''
+          'My IDE Option Preferences'
+          '------------------------------------------------------------------------------------------'
+          'Tools, Options, Environment ($PrimaryConfigPath\environmentoptions.xml):'
+          #9'Window:'#9#9#9'Check IDE title start with project name+directory+build mode'
+          #9'Object Inspector:'#9'Check show hints'
+          #9'IDE CoolBar:'#9#9'Add ''Project Options'' button next to the ''Desktops'' button'
+          #9'IDE CoolBar:'#9#9'Add ''Run without Debug'' button next to the ''Run'' button'
+          ''
+          'Tools, Options, Editor ($PrimaryConfigPath\editoroptions.xml):'
+          #9'General'
+          #9#9'UNcheck Caret past end of line'
+          #9#9'Check Home key and End key jumps to nearest..'
+          #9'General Tab and Indent'
+          #9#9'Tabs to spaces=2 tab widths'
+          #9#9'UNcheck smart tabs'
+          #9'Display'
+          #9#9'Visible right margin=90 '#9'{my printer''s right edge, portrait mode}'
+          #9#9'Font=Courier New, 14'#9#9'{easier to read on my 32" monitor}'
+          #9#9'Colors: Background=Cream'#9'{easier on my eyes}'
+          ''
+          'My Project Option Preferences'
+          '------------------------------------------------------------------------------------------'
+          'Project, Options ($ProjPath)\project.lpi):'
+          #9'Build Modes'
+          #9#9'Default, Debug, Release, Debug64, Release64'
+          #9'Compiler commands, execute before'
+          #9#9'C:\lazarus\execute_before.bat $Name($TargetFile())'
+          #9#9'execute_before.bat will kill the project.exe if it is running'
+          #9#9
+          'Check "Set compiler options as default": Save to ($PrimaryConfigPath)\projectoptions.xml'
+          ''
+          'References'
+          '------------------------------------------------------------------------------------------'
+          'Lazarus wiki (http://wiki.freepascal.org/):'
+          #9'Multiple Lazarus'
+          #9'IDE Macros in paths and filenames'
+          #9'IDE Window: IDE Options Dialog'
+          #9'IDE Window: Project Options'
+        )
+        ParentFont = False
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+        WordWrap = False
+      end
+    end
+    object TabIDEOptions: TTabSheet
+      Caption = 'IDE Options'
+      ClientHeight = 532
+      ClientWidth = 792
+      object DirSource: TDirectoryEdit
+        Left = 64
+        Height = 23
+        Top = 16
+        Width = 530
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 0
+        OnChange = DirSourceChange
+      end
+      object DirTarget: TDirectoryEdit
+        Left = 64
+        Height = 23
+        Top = 56
+        Width = 530
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object LabelDirFrom: TLabel
+        Left = 21
+        Height = 15
+        Top = 18
+        Width = 31
+        Caption = 'From:'
+        ParentColor = False
+      end
+      object LabelDirTo: TLabel
+        Left = 21
+        Height = 15
+        Top = 56
+        Width = 16
+        Caption = 'To:'
+        ParentColor = False
+      end
+      object OptionFileList: TFileListBox
+        Left = 64
+        Height = 368
+        Top = 96
+        Width = 529
+        Directory = 'C:\lazarus\184'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Pitch = fpFixed
+        Font.Quality = fqDraft
+        ItemHeight = 16
+        MultiSelect = True
+        ParentFont = False
+        TabOrder = 2
+      end
+      object ButtonCopyIDEOptions: TButton
+        Left = 537
+        Height = 22
+        Top = 488
+        Width = 57
+        Caption = 'Copy'
+        OnClick = ButtonCopyIDEOptionsClick
+        TabOrder = 3
+      end
+    end
+    object TabProjectOptions: TTabSheet
+      Caption = 'Project Options'
+      ClientHeight = 532
+      ClientWidth = 792
+      object LabelFileFrom: TLabel
+        Left = 21
+        Height = 15
+        Top = 18
+        Width = 31
+        Caption = 'From:'
+        ParentColor = False
+      end
+      object LabelFileTo: TLabel
+        Left = 21
+        Height = 15
+        Top = 56
+        Width = 16
+        Caption = 'To:'
+        ParentColor = False
+      end
+      object ButtonCopyProjectOptions: TButton
+        Left = 552
+        Height = 24
+        Top = 104
+        Width = 40
+        Caption = 'Copy'
+        OnClick = ButtonCopyProjectOptionsClick
+        TabOrder = 0
+      end
+      object FileSource: TFileNameEdit
+        Left = 64
+        Height = 23
+        Top = 16
+        Width = 530
+        FilterIndex = 0
+        HideDirectories = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 1
+        TextHint = 'Select MyProjectOptions.xml file:'
+      end
+      object FileTarget: TFileNameEdit
+        Left = 64
+        Height = 23
+        Top = 56
+        Width = 530
+        FilterIndex = 0
+        HideDirectories = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 2
+        TextHint = 'Select project.lpi file:'
+      end
+    end
+  end
+end

@@ -1,0 +1,81 @@
+object frmMain: TfrmMain
+  Left = 351
+  Height = 480
+  Top = 250
+  Width = 640
+  ActiveControl = btnHelp
+  Caption = 'LazDebugUnit Manager'
+  ClientHeight = 480
+  ClientWidth = 640
+  Color = clTeal
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object btnHelp: TButton
+    Left = 40
+    Height = 26
+    Top = 432
+    Width = 126
+    Caption = 'Help'
+    Default = True
+    OnClick = btnHelpClick
+    TabOrder = 0
+  end
+  object btnDemo: TButton
+    Left = 181
+    Height = 26
+    Top = 432
+    Width = 126
+    Caption = 'Demo'
+    OnClick = btnDemoClick
+    TabOrder = 1
+  end
+  object btnAdd: TButton
+    Left = 463
+    Height = 26
+    Top = 432
+    Width = 126
+    Caption = 'Add DebugUnit'
+    OnClick = btnAddClick
+    TabOrder = 3
+  end
+  object btnRemove: TButton
+    Left = 322
+    Height = 26
+    Top = 432
+    Width = 126
+    Caption = 'Remove DebugUnit'
+    OnClick = btnRemoveClick
+    TabOrder = 2
+  end
+  object FileListBox: TFileListBox
+    Left = 24
+    Height = 360
+    Top = 56
+    Width = 590
+    Directory = 'C:\lazarus\184'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ItemHeight = 17
+    MultiSelect = True
+    ParentFont = False
+    TabOrder = 4
+  end
+  object DirectoryEdit: TDirectoryEdit
+    Left = 24
+    Height = 23
+    Top = 16
+    Width = 590
+    ShowHidden = False
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 5
+    OnChange = DirectoryEditChange
+    TextHint = 'Select Lazaurs project directory'
+  end
+end

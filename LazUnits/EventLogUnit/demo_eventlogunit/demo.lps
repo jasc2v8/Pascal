@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Debug"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="demo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="21"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos Y="5"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="eventlogunit.pas"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="eventlogunit.pas"/>
+        <Caret Line="24" Column="44" TopLine="10"/>
+      </Position1>
+      <Position2>
+        <Filename Value="eventlogunit.pas"/>
+        <Caret Line="23" TopLine="15"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="9" Column="15" TopLine="7"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="22" TopLine="10"/>
+      </Position4>
+      <Position5>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="45" Column="24" TopLine="30"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="55" Column="37" TopLine="33"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="8" Column="57"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="45" Column="4" TopLine="34"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="53" Column="20" TopLine="40"/>
+      </Position9>
+      <Position10>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="56" Column="3" TopLine="43"/>
+      </Position10>
+      <Position11>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="62" Column="13" TopLine="56"/>
+      </Position11>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

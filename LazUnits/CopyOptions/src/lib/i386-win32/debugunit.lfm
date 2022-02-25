@@ -1,0 +1,31 @@
+object DebugForm: TDebugForm
+  Left = 0
+  Height = 557
+  Top = 0
+  Width = 480
+  ActiveControl = Memo
+  Caption = 'Debug Form'
+  ClientHeight = 557
+  ClientWidth = 480
+  ParentBiDiMode = False
+  LCLVersion = '1.8.4.0'
+  Scaled = False
+  Visible = False
+  object Memo: TMemo
+    Left = 8
+    Height = 489
+    Top = 9
+    Width = 458
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object ButtonClear: TButton
+    Left = 407
+    Height = 25
+    Top = 516
+    Width = 55
+    Caption = 'Clear'
+    OnClick = ButtonClearClick
+    TabOrder = 1
+  end
+end

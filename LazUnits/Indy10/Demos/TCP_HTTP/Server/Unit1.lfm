@@ -1,0 +1,41 @@
+object StringServerForm: TStringServerForm
+  Left = 0
+  Height = 311
+  Top = 0
+  Width = 413
+  Caption = 'Very Simple String Exchange Server Indy 10.5.5'
+  ClientHeight = 311
+  ClientWidth = 413
+  Color = clRed
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object CheckBox1: TCheckBox
+    Left = 14
+    Height = 19
+    Top = 24
+    Width = 70
+    Caption = 'Start/Stop'
+    OnClick = CheckBox1Click
+    TabOrder = 0
+  end
+  object Memo1: TMemo
+    Left = 8
+    Height = 241
+    Top = 62
+    Width = 394
+    Lines.Strings = (
+      '<  VERSION 01.05.2012>'
+      ''
+      '* http://sourceforge.net/projects/indy10clieservr/)'
+      '* no support - no help - no warrenty - no ...'
+      '* feel free to post your comments on source forge'
+      '* add new features ..'
+      ''
+    )
+    TabOrder = 1
+  end
+end

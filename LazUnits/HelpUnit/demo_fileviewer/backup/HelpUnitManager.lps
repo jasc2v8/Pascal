@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="6">
+      <Unit0>
+        <Filename Value="HelpUnitManager.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="3" Y="10"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="uHelp.lfm"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="helpunitresources.inc"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="HelpForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UsageCount Value="20"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="uHelpDemo.lfm"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="helpunitresources.pas"/>
+        <ComponentName Value="HelpForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="7"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+    </Units>
+    <JumpHistory Count="6" HistoryIndex="5">
+      <Position1>
+        <Filename Value="main.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="helpunitresources.pas"/>
+        <Caret Line="60" Column="38" TopLine="49"/>
+      </Position2>
+      <Position3>
+        <Filename Value="helpunitresources.pas"/>
+        <Caret Line="12" Column="12"/>
+      </Position3>
+      <Position4>
+        <Filename Value="helpunitresources.pas"/>
+        <Caret Line="5" Column="3"/>
+      </Position4>
+      <Position5>
+        <Filename Value="helpunitresources.pas"/>
+        <Caret Line="6"/>
+      </Position5>
+      <Position6>
+        <Filename Value="main.pas"/>
+      </Position6>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

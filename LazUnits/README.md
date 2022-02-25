@@ -1,0 +1,17 @@
+![Environment](https://img.shields.io/badge/Windows-XP,%20Vista,%207,%208,%2010-brightgreen.svg)
+[![Release](https://img.shields.io/github/release/jasc2v8/LazUnits.svg)](https://github.com/jasc2v8/LazUnits/releases)
+[![License](https://img.shields.io/badge/license-unlicense-yellow.svg)](http://unlicense.org)
+![TotalDownloads](https://img.shields.io/github/downloads/jasc2v8/LazUnits/total.svg)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-red.svg)](https://www.paypal.me/JimDreherHome)
+
+# Lazarus Units
+
+Free Pascal and Lazarus IDE units for use on all supported platforms.
+  
+## Development Tools
+
+These units were developed using the Lazarus IDE version 1.8.4 with Free Pascal version 3.0.4.  They have been tested on both 32 and 64 bit versions of WinXP, Win7, and Win10 using Virtualbox.
+
+### Donations
+
+If this units are useful, or if the source code helps you in some way, then a small donation would be appreciated.  Just click on the "donation" button above.  Your donation is not tax deductible, but will be used to help promote freeware from myself and other software authors.

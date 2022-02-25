@@ -1,0 +1,220 @@
+object Form1: TForm1
+  Left = 351
+  Height = 425
+  Top = 250
+  Width = 611
+  Caption = 'Win Admin Lauch Tool (WALT)'
+  ClientHeight = 425
+  ClientWidth = 611
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object btnLaunch: TButton
+    Left = 472
+    Height = 22
+    Top = 384
+    Width = 57
+    Caption = 'Launch'
+    OnClick = btnLaunchClick
+    TabOrder = 0
+  end
+  object ListBox: TListBox
+    Left = 8
+    Height = 363
+    Top = 8
+    Width = 592
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Items.Strings = (
+      '//Windows 10'
+      '{ ********** Favorites ********** }'
+      'APPDATA=C:\Users\Jim\AppData\Roaming'
+      'LOCALAPPDATA=C:\Users\Jim\AppData\Local'
+      'shell:AppData'
+      'shell:Common Startup'
+      'shell:Local AppData'
+      'shell:LocalAppDataLow'
+      'shell:Quick Launch'
+      'shell:Recent'
+      'shell:SendTo'
+      'shell:Start Menu'
+      'shell:Startup'
+      '{ ********** Environment ********** }'
+      'ALLUSERSPROFILE=C:\ProgramData'
+      'APPDATA=C:\Users\Jim\AppData\Roaming'
+      'CommonProgramFiles=C:\Program Files\Common Files'
+      'CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files'
+      'CommonProgramW6432=C:\Program Files\Common Files'
+      'DriverData=C:\Windows\System32\Drivers\DriverData'
+      'HOMEDRIVE=C:'
+      'HOMEPATH=\Users\Jim'
+      'LOCALAPPDATA=C:\Users\Jim\AppData\Local'
+      'OneDrive=C:\Users\Jim\OneDrive'
+      'ProgramData=C:\ProgramData'
+      'ProgramFiles=C:\Program Files'
+      'ProgramFiles(x86)=C:\Program Files (x86)'
+      'ProgramW6432=C:\Program Files'
+      'PUBLIC=C:\Users\Public'
+      'SystemDrive=C:'
+      'SystemRoot=C:\WINDOWS'
+      'TEMP=C:\Users\Jim\AppData\Local\Temp'
+      'TMP=C:\Users\Jim\AppData\Local\Temp'
+      'USERPROFILE=C:\Users\Jim'
+      'windir=C:\WINDOWS'
+      '{ ********** Shell ********** }'
+      'shell:3D Objects'
+      'shell:AccountPictures'
+      'shell:AddNewProgramsFolder'
+      'shell:Administrative Tools'
+      'shell:AppData'
+      'shell:Application Shortcuts'
+      'shell:AppsFolder'
+      'shell:AppUpdatesFolder'
+      'shell:Cache'
+      'shell:Camera Roll'
+      '{shell:CameraRollLibrary}'
+      'shell:Captures'
+      'shell:CD Burning'
+      'shell:ChangeRemoveProgramsFolder'
+      'shell:Common Administrative Tools'
+      'shell:Common AppData'
+      'shell:Common Desktop'
+      'shell:Common Documents'
+      'shell:Common Programs'
+      'shell:Common Start Menu'
+      'shell:Common Start Menu Places'
+      'shell:Common Startup'
+      'shell:Common Templates'
+      'shell:CommonDownloads'
+      'shell:CommonMusic'
+      'shell:CommonPictures'
+      'shell:CommonRingtones'
+      'shell:CommonVideo'
+      'shell:ConflictFolder'
+      'shell:ConnectionsFolder'
+      'shell:Contacts'
+      'shell:ControlPanelFolder'
+      'shell:Cookies'
+      'shell:CredentialManager'
+      'shell:CryptoKeys'
+      '{shell:CSCFolder}'
+      'shell:Desktop'
+      '{shell:Development Files}'
+      'shell:Device Metadata Store'
+      'shell:DocumentsLibrary'
+      'shell:Downloads'
+      'shell:DpapiKeys'
+      'shell:Favorites'
+      'shell:Fonts'
+      '{shell:Games}'
+      'shell:GameTasks'
+      'shell:History'
+      '{shell:HomeGroupCurrentUserFolder}'
+      '{shell:HomeGroupFolder}'
+      'shell:ImplicitAppShortcuts'
+      '{shell:InternetFolder}'
+      'shell:Libraries'
+      'shell:Links'
+      'shell:Local AppData'
+      'shell:Local Documents'
+      'shell:Local Downloads'
+      'shell:Local Music'
+      'shell:Local Pictures'
+      'shell:Local Videos'
+      'shell:LocalAppDataLow'
+      '{shell:MAPIFolder}'
+      'shell:MusicLibrary'
+      'shell:My Music'
+      'shell:My Pictures'
+      'shell:My Video'
+      'shell:MyComputerFolder'
+      'shell:NetHood'
+      'shell:NetworkPlacesFolder'
+      '{shell:OEM Links}'
+      'shell:OneDrive'
+      '{shell:OneDriveCameraRoll}'
+      '{shell:OneDriveDocuments}'
+      '{shell:OneDriveMusic}'
+      '{shell:OneDrivePictures}'
+      '{shell:Original Images}'
+      'shell:Personal'
+      '{shell:PhotoAlbums}'
+      'shell:PicturesLibrary'
+      '{shell:Playlists}'
+      'shell:PrintersFolder'
+      'shell:PrintHood'
+      'shell:Profile'
+      'shell:ProgramFiles'
+      'shell:ProgramFilesCommon'
+      'shell:ProgramFilesCommonX64'
+      'shell:ProgramFilesCommonX86'
+      'shell:ProgramFilesX64'
+      'shell:ProgramFilesX86'
+      'shell:Programs'
+      'shell:Public'
+      'shell:PublicAccountPictures'
+      'shell:PublicGameTasks'
+      'shell:PublicLibraries'
+      'shell:Quick Launch'
+      'shell:Recent'
+      '{shell:Recorded Calls}'
+      '{shell:RecordedTVLibrary}'
+      'shell:RecycleBinFolder'
+      'shell:ResourceDir'
+      '{sshell:Retail Demo}'
+      'shell:Ringtones'
+      '{shell:Roamed Tile Images}'
+      'shell:Roaming Tiles'
+      'shell:SavedGames'
+      'shell:SavedPictures'
+      'shell:SavedPicturesLibrary'
+      '{shell:Screenshots}'
+      'shell:Searches'
+      '{shell:SearchHistoryFolder}'
+      'shell:SearchHomeFolder'
+      '{shell:SearchTemplatesFolder}'
+      'shell:SendTo'
+      'shell:Start Menu'
+      '{shell:StartMenuAllPrograms}'
+      'shell:Startup'
+      'shell:SyncCenterFolder'
+      'shell:SyncResultsFolder'
+      'shell:SyncSetupFolder'
+      'shell:System'
+      'shell:SystemCertificates'
+      'shell:SystemX86'
+      'shell:Templates'
+      'shell:ThisDeviceFolder'
+      'shell:ThisPCDesktopFolder'
+      'shell:User Pinned'
+      'shell:UserProfiles'
+      'shell:UserProgramFiles'
+      'shell:UserProgramFilesCommon'
+      'shell:UsersFilesFolder'
+      'shell:UsersLibrariesFolder'
+      'shell:VideosLibrary'
+      '{shell:Virtual Machines}'
+      'shell:Windows'
+    )
+    ItemHeight = 17
+    OnDblClick = ListBoxDblClick
+    OnKeyPress = ListBoxKeyPress
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnCancel: TButton
+    Left = 543
+    Height = 22
+    Top = 384
+    Width = 57
+    Caption = 'Cancel'
+    OnClick = btnCancelClick
+    TabOrder = 2
+  end
+end

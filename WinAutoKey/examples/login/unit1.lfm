@@ -1,0 +1,35 @@
+object Form1: TForm1
+  Left = 351
+  Height = 425
+  Top = 250
+  Width = 611
+  Caption = 'Login Example'
+  ClientHeight = 425
+  ClientWidth = 611
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object Memo1: TMemo
+    Left = 21
+    Height = 347
+    Top = 20
+    Width = 572
+    Lines.Strings = (
+      'Press OK then watch the auomated login.'
+      ''
+      'Please do not move the mouse or press any keys on the keyboard until finished.'
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 1
+  end
+  object ButtonOK: TButton
+    Left = 532
+    Height = 22
+    Top = 384
+    Width = 57
+    Caption = 'OK'
+    Default = True
+    OnClick = ButtonOKClick
+    TabOrder = 0
+  end
+end

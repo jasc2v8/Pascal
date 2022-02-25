@@ -1,0 +1,89 @@
+object Form1: TForm1
+  Left = 290
+  Height = 480
+  Top = 156
+  Width = 640
+  ActiveControl = btnExtract
+  Caption = 'Demo WinAutoKey'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  Visible = False
+  object btnExtract: TButton
+    Left = 544
+    Height = 25
+    Top = 440
+    Width = 75
+    Caption = 'Extract Links'
+    OnClick = btnExtractClick
+    TabOrder = 0
+  end
+  object Memo1: TMemo
+    Left = 9
+    Height = 414
+    Top = 10
+    Width = 611
+    Lines.Strings = (
+      'Extract Links From Chrome Brower:'
+      ''
+      '  1. Open Chrome Browser'
+      ''
+      '  3. Open this program in front of browser'
+      ''
+      '  3. Press start'
+      ''
+      'Please do NOT touch keyboard or mouse until it is finished.'
+      ''
+      'To abort, press ESC and wait a few seconds.'
+      ''
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 1
+  end
+  object btnWinState: TButton
+    Left = 448
+    Height = 25
+    Top = 440
+    Width = 75
+    Caption = 'Win State'
+    OnClick = btnWinStateClick
+    TabOrder = 2
+  end
+  object btnClear: TButton
+    Left = 16
+    Height = 25
+    Top = 440
+    Width = 75
+    Caption = 'Clear'
+    OnClick = btnClearClick
+    TabOrder = 3
+  end
+  object btnNotepad: TButton
+    Left = 352
+    Height = 25
+    Top = 440
+    Width = 75
+    Caption = 'Notepad'
+    OnClick = btnNotepadClick
+    TabOrder = 4
+  end
+  object btnPaint: TButton
+    Left = 256
+    Height = 25
+    Top = 440
+    Width = 75
+    Caption = 'MSPaint'
+    OnClick = btnPaintClick
+    TabOrder = 5
+  end
+  object btnMouse: TButton
+    Left = 168
+    Height = 25
+    Top = 440
+    Width = 75
+    Caption = 'Mouse'
+    OnClick = btnMouseClick
+    TabOrder = 6
+  end
+end

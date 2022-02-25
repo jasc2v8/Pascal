@@ -1,0 +1,50 @@
+object Form1: TForm1
+  Left = 351
+  Height = 425
+  Top = 250
+  Width = 611
+  ActiveControl = Memo1
+  Caption = 'Debug Form Demo'
+  ClientHeight = 425
+  ClientWidth = 611
+  OnShow = FormShow
+  Position = poScreenCenter
+  Visible = False
+  object Memo1: TMemo
+    Left = 8
+    Height = 347
+    Top = 8
+    Width = 592
+    Lines.Strings = (
+      'This is a demo of the DebugUnit Form.'
+      ''
+      'Press the START button to:'
+      ''
+      '1. Show the form'
+      ''
+      '2. Write debug info'
+      ''
+      'Enjoy'
+    )
+    ScrollBars = ssBoth
+    TabOrder = 0
+  end
+  object ButtonStart: TButton
+    Left = 532
+    Height = 22
+    Top = 384
+    Width = 66
+    Caption = 'START'
+    OnClick = ButtonStartClick
+    TabOrder = 1
+  end
+  object btnClear: TButton
+    Left = 8
+    Height = 22
+    Top = 384
+    Width = 66
+    Caption = 'Clear'
+    OnClick = btnClearClick
+    TabOrder = 2
+  end
+end
